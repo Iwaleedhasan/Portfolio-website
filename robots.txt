@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://iwaleedhasan.github.io/Portfolio-website/sitemap.xml
+Sitemap: https://waleedhassan.vercel.app/sitemap.xml
