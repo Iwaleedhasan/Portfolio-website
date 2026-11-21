@@ -4,7 +4,7 @@
 > BSc Computer Science @ University of Engineering and Technology (UET), Lahore  
 > Gujranwala, Pakistan  
 > Email: [grw2206420@outlook.com](mailto:grw2206420@outlook.com)  
-> GitHub: [github.com/Waleedhasn](https://github.com/Waleedhasn) • LinkedIn: [linkedin.com/in/waleed-hassan-98768b330](https://www.linkedin.com/in/waleed-hassan-98768b330)
+> GitHub: [github.com/Iwaleedhasan](https://github.com/Iwaleedhasan) • LinkedIn: [linkedin.com/in/waleed-hassan-98768b330](https://www.linkedin.com/in/waleed-hassan-98768b330)
 
 ---
 
@@ -32,7 +32,7 @@ This folder is 100% self-contained and pure static.
 - **GitHub Pages:**
   1. Push changes to GitHub (or run `deploy_to_github.bat`).
   2. In your repo: **Settings > Pages > Deploy from a branch (`main` / `root`)**.
-  3. Live URL: **https://waleedhasn.github.io/Computer-science-Portfolio-website/**
+  3. Live URL: **https://iwaleedhasan.github.io/Portfolio-website/**
 - **Vercel / Netlify:** Import the repository and deploy with zero build configuration!
 
 ---
@@ -43,7 +43,8 @@ This folder is 100% self-contained and pure static.
 Portfolio website/
 ├── index.html                   # Master static portfolio webpage
 ├── bg.jpg                       # Black & white portrait photograph
-├── favicon.ico / icon.svg       # Favicons
+├── favicon.ico / icon.svg       # Favicons & monogram icons
+├── icon.png / apple-touch-icon  # High-DPI transparent icons
 ├── server.py                    # Lightweight local development server
 ├── start.bat                    # 1-click local launch script
 ├── deploy_to_github.bat         # 1-click push script to GitHub
