@@ -32,7 +32,7 @@ This folder is 100% self-contained and pure static.
 - **GitHub Pages:**
   1. Push changes to GitHub (or run `deploy_to_github.bat`).
   2. In your repo: **Settings > Pages > Deploy from a branch (`main` / `root`)**.
-  3. Live URL: **https://waleedhasn.github.io/Portfolio-Website/**
+  3. Live URL: **https://waleedhasn.github.io/Computer-science-Portfolio-website/**
 - **Vercel / Netlify:** Import the repository and deploy with zero build configuration!
 
 ---

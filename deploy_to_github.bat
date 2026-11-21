@@ -3,8 +3,8 @@ echo =============================================================
 echo   Push Waleed Hassan Portfolio to GitHub
 echo =============================================================
 echo.
-set /p REPONAME="Enter your GitHub repository name (press ENTER for default: Portfolio-Website): "
-if "%REPONAME%"=="" set REPONAME=Portfolio-Website
+set /p REPONAME="Enter your GitHub repository name (press ENTER for default: Computer-science-Portfolio-website): "
+if "%REPONAME%"=="" set REPONAME=Computer-science-Portfolio-website
 
 echo.
 echo [1/3] Setting remote to: https://github.com/Waleedhasn/%REPONAME%.git
