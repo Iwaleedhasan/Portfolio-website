@@ -25,16 +25,14 @@ An interactive, responsive, high-performance portfolio website built with:
 
 ### Option 1: Static Hosting (GitHub Pages / Netlify / Vercel)
 This folder is 100% self-contained! You can double-click `index.html` or deploy directly to **GitHub Pages**:
-1. Push this folder to a GitHub repository:
+1. Run `deploy_to_github.bat` or push manually:
    ```bash
-   git init
-   git add .
-   git commit -m "Initial commit of Waleed Hassan Portfolio Website"
+   git remote add origin https://github.com/Waleedhasn/Portfolio-Website.git
    git branch -M main
-   git remote add origin https://github.com/Waleedhasn/<repo-name>.git
-   git push -u origin main
+   git push -u origin main --force
    ```
-2. Enable **GitHub Pages** under **Settings > Pages > Deploy from branch (main / root)**.
+2. Enable **GitHub Pages** under **Settings > Pages > Deploy from a branch (`main` / `root`)**.
+3. Live URL: **https://waleedhasn.github.io/Portfolio-Website/**
 
 ### Option 2: Run with Next.js App Router
 ```bash
@@ -52,6 +50,7 @@ Portfolio website/
 ├── index.html                   # Master self-contained portfolio webpage
 ├── bg.jpg                       # Black & white portrait photograph
 ├── favicon.ico / icon.svg       # Favicons
+├── deploy_to_github.bat         # 1-click push script to GitHub
 ├── css/
 │   └── style.css                # Base stylesheet and theme tokens
 ├── js/
