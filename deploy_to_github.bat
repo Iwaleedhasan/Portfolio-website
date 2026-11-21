@@ -1,35 +1,47 @@
 @echo off
 echo =============================================================
 echo   Push Waleed Hassan Portfolio to GitHub
+echo   Target: https://github.com/Iwaleedhasan/Portfolio-website.git
 echo =============================================================
 echo.
-set /p REPOURL="Enter your GitHub repository URL (press ENTER for default: https://github.com/Iwaleedhasan/Portfolio-website.git): "
-if "%REPOURL%"=="" set REPOURL=https://github.com/Iwaleedhasan/Portfolio-website.git
-
-echo.
-echo [1/3] Setting remote to: %REPOURL%
 git remote remove origin 2>nul
-git remote add origin %REPOURL%
-
-echo.
-echo [2/3] Checking branch status...
+git remote add origin https://github.com/Iwaleedhasan/Portfolio-website.git
 git branch -M main
 
-echo.
-echo [3/3] Pushing to GitHub (using stored credentials or browser login)...
+echo Pushing code to https://github.com/Iwaleedhasan/Portfolio-website.git ...
 git push -u origin main --force
 
+if %errorlevel% neq 0 (
+    echo.
+    echo =============================================================
+    echo [!] PERMISSION ERROR (403):
+    echo Your Windows is currently saved with GitHub account: 'Waleedhasn'.
+    echo Your new repo belongs to: 'Iwaleedhasan'.
+    echo.
+    echo CHOOSE A SOLUTION:
+    echo.
+    echo [Option 1] Add 'Waleedhasn' as a collaborator to your new repo:
+    echo            https://github.com/Iwaleedhasan/Portfolio-website/settings/access
+    echo            (Then run this bat file again and it pushes instantly!)
+    echo.
+    echo [Option 2] Switch your Windows Git sign-in to 'Iwaleedhasan':
+    echo =============================================================
+    set /p CHOICE="Press S to switch Git login to Iwaleedhasan (or any key to exit): "
+    if /i "%CHOICE%"=="S" (
+        echo.
+        echo Removing old saved GitHub account...
+        cmdkey /delete:LegacyGeneric:target=git:https://github.com 2>nul
+        cmdkey /delete:git:https://github.com 2>nul
+        echo.
+        echo Sign in with your 'Iwaleedhasan' account in the browser:
+        git push -u origin main --force
+    )
+) else (
+    echo.
+    echo =============================================================
+    echo [SUCCESS] Your code is live on GitHub:
+    echo https://github.com/Iwaleedhasan/Portfolio-website
+    echo =============================================================
+)
 echo.
-echo =============================================================
-echo Done! Your code is on GitHub:
-echo %REPOURL%
-echo.
-echo To enable free live website on GitHub Pages:
-echo 1. Open: https://github.com/Iwaleedhasan/Portfolio-website/settings/pages
-echo 2. Under 'Build and deployment' -> 'Source', select 'Deploy from a branch'
-echo 3. Select Branch: 'main' and Folder: '/(root)', then click Save!
-echo.
-echo Your live site will be at:
-echo https://iwaleedhasan.github.io/Portfolio-website/
-echo =============================================================
 pause
