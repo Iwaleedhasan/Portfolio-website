@@ -1,28 +1,9 @@
-# Dependencies
-node_modules/
-.pnp
-.pnp.js
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
 
-# Testing & Coverage
-coverage/
-
-# Next.js build output
-.next/
-out/
-build/
-dist/
-
-# Debug logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# Environment variables
-.env
-.env*.local
-
-# System files
+# OS metadata
 .DS_Store
 Thumbs.db
 *.bak

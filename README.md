@@ -10,7 +10,7 @@
 
 ## 🌟 Overview
 
-An interactive, responsive, high-performance portfolio website built with:
+An interactive, responsive, high-performance static portfolio website built with pure HTML, CSS, and modern JavaScript:
 - **Light & Dark Mode Switcher:** Instant, persistent theme switching with smooth Sun/Moon icon toggle.
 - **3D Scroll-Morphing Profile Card:** Seamlessly rotates 180° on scroll and docks into the 3-column biography section.
 - **Categorized Tech Stack Bento:** 3 columns showcasing Languages & Frameworks, AI & Retrieval Engineering, and Databases & Tools.
@@ -23,23 +23,17 @@ An interactive, responsive, high-performance portfolio website built with:
 
 ## 🚀 Quick Start / Deployment
 
-### Option 1: Static Hosting (GitHub Pages / Netlify / Vercel)
-This folder is 100% self-contained! You can double-click `index.html` or deploy directly to **GitHub Pages**:
-1. Run `deploy_to_github.bat` or push manually:
-   ```bash
-   git remote add origin https://github.com/Waleedhasn/Portfolio-Website.git
-   git branch -M main
-   git push -u origin main --force
-   ```
-2. Enable **GitHub Pages** under **Settings > Pages > Deploy from a branch (`main` / `root`)**.
-3. Live URL: **https://waleedhasn.github.io/Portfolio-Website/**
+### 1. Run Locally
+- Double-click `start.bat` (or open `index.html` in any browser, or run `python server.py`).
+- View at: [http://localhost:3000](http://localhost:3000)
 
-### Option 2: Run with Next.js App Router
-```bash
-npm install
-npm run dev
-```
-Open [http://localhost:3000](http://localhost:3000) to view the Next.js version.
+### 2. Static Hosting (GitHub Pages / Netlify / Vercel)
+This folder is 100% self-contained and pure static.
+- **GitHub Pages:**
+  1. Push changes to GitHub (or run `deploy_to_github.bat`).
+  2. In your repo: **Settings > Pages > Deploy from a branch (`main` / `root`)**.
+  3. Live URL: **https://waleedhasn.github.io/Portfolio-Website/**
+- **Vercel / Netlify:** Import the repository and deploy with zero build configuration!
 
 ---
 
@@ -47,9 +41,11 @@ Open [http://localhost:3000](http://localhost:3000) to view the Next.js version.
 
 ```
 Portfolio website/
-├── index.html                   # Master self-contained portfolio webpage
+├── index.html                   # Master static portfolio webpage
 ├── bg.jpg                       # Black & white portrait photograph
 ├── favicon.ico / icon.svg       # Favicons
+├── server.py                    # Lightweight local development server
+├── start.bat                    # 1-click local launch script
 ├── deploy_to_github.bat         # 1-click push script to GitHub
 ├── css/
 │   └── style.css                # Base stylesheet and theme tokens
@@ -65,8 +61,6 @@ Portfolio website/
 │   └── bengaluru/
 │       ├── waleed-standing.png  # Transparent standing avatar (Yellow sneakers)
 │       └── crowd-01..07.webp    # Pedestrian crowd sprite sheets
-├── src/                         # Next.js App Router source files
-├── public/                      # Static assets for Next.js
 └── README.md                    # Project documentation
 ```
 
