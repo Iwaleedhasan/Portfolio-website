@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" class="dark">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+  <title>Waleed Hassan · Computer Scientist &amp; Web Developer</title>
+  <meta name="description" content="Computer Science undergraduate at UET Lahore specializing in responsive web development, conversational AI architectures, relational database systems, and algorithmic software engineering."/>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Waleed Hassan · Computer Scientist &amp; Web Developer"/>
+  <meta property="og:description" content="Computer Science undergraduate at UET Lahore specializing in responsive web development, conversational AI architectures, relational database systems, and algorithmic software engineering."/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://github.com/Waleedhasn"/>
+  <meta property="og:image" content="./bg.jpg"/>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Waleed Hassan · Computer Scientist &amp; Web Developer"/>
+  <meta name="twitter:description" content="Computer Science undergraduate at UET Lahore specializing in responsive web development, conversational AI architectures, relational database systems, and algorithmic software engineering."/>
+  <meta name="twitter:image" content="./bg.jpg"/>
+
+  <link rel="icon" href="./favicon.ico" sizes="any"/>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css"/>
+
+  <!-- Theme Fast Init to Prevent Flash -->
+  <script>
+    (function() {
+      try {
+        var theme = localStorage.getItem('portfolio-theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+          document.documentElement.classList.remove('light');
+        } else {
+          document.documentElement.classList.add('light');
+          document.documentElement.classList.remove('dark');
+        }
+      } catch(e) {}
+    })();
+  </script>
+
+  <!-- Complete Theme Engine & Component Enhancements -->
+  <style>
+    /* Global Theme Overrides for Instant & Accurate Switching */
+    :root, html[data-theme="light"], html.light {
+      --sc-canvas: #f7f4f0 !important;
+      --sc-surface: #ffffff !important;
+      --sc-ink: #141414 !important;
+      --sc-ink-soft: #5b5a57 !important;
+      --line: #dedcd7 !important;
+      --surface-strong: #eeede9 !important;
+      --accent-wash: #e9e7e1 !important;
+      background-color: #f7f4f0 !important;
+      color: #141414 !important;
+      color-scheme: light !important;
+    }
+    :root[data-theme="dark"], html[data-theme="dark"], html.dark {
+      --sc-canvas: #08090b !important;
+      --sc-surface: #121316 !important;
+      --sc-ink: #f5f4f0 !important;
+      --sc-ink-soft: #9a9ba1 !important;
+      --line: #262626 !important;
+      --surface-strong: #1a1a1e !important;
+      --accent-wash: #202025 !important;
+      background-color: #08090b !important;
+      color: #f5f4f0 !important;
+      color-scheme: dark !important;
+    }
+
+    body {
+      background: var(--sc-canvas) !important;
+      color: var(--sc-ink) !important;
+      font-family: "Geist", system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.25s ease, color 0.25s ease;
+      overflow-x: hidden;
+    }
+
+    /* Floating Pill Navbar */
+    .site-header {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
+    .floating-pill-nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 6px 14px 6px 18px;
+      background: #141416 !important;
+      border: 1px solid rgba(255, 255, 255, 0.14) !important;
+      border-radius: 999px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(12px);
+    }
+    .floating-pill-nav a.brand-pill {
+      color: #f5f4f0 !important;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+    .floating-pill-nav .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .theme-toggle {
+      background: transparent !important;
+      border: none !important;
+      color: #f5f4f0 !important;
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.14) !important;
+      transform: scale(1.08);
+    }
+    .nav-menu-trigger {
+      background: #f5f4f0 !important;
+      color: #141416 !important;
+      border: none !important;
+      width: 40px;
+      height: 32px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .nav-menu-trigger:hover {
+      background: #ffffff !important;
+      transform: scale(1.05);
+    }
+
+    /* Hero Headline & Reveal */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+    @media (max-width: 700px) {
+      .hero {
+        padding-top: 96px !important;
+        min-height: 560px;
+      }
+      .hero-display-title {
+        font-size: clamp(32px, 9.2vw, 48px) !important;
+        line-height: 1.0 !important;
+      }
+      .hero-portrait-link {
+        width: clamp(140px, 24svh, 210px) !important;
+        bottom: 16px !important;
+      }
+      .hero-footer {
+        bottom: 14px !important;
+        padding-inline: 16px !important;
+      }
+      .hero-year {
+        font-size: clamp(24px, 5svh, 36px) !important;
+      }
+      .hero-focus {
+        font-size: 11px !important;
+      }
+    }
+    @media (min-width: 701px) and (max-width: 1024px) {
+      .hero {
+        padding-top: 90px !important;
+      }
+      .hero-display-title {
+        font-size: clamp(52px, 9.5vw, 92px) !important;
+      }
+    }
+    .hero[data-hero-intro="done"] .hero-letter,
+    .hero[data-hero-intro="done"] .hero-code-mark svg,
+    .hero .hero-letter,
+    .hero .hero-code-mark svg {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+    .hero-display-title {
+      color: var(--sc-ink) !important;
+      font-family: "Instrument Sans", system-ui, sans-serif;
+      font-size: min(12.5vw, 22svh, 175px);
+      letter-spacing: -0.035em;
+      font-weight: 900;
+      line-height: 0.9;
+      text-align: center;
+      margin: 0;
+    }
+    .hero-code-mark svg {
+      display: inline-block;
+      height: 0.72em;
+      width: auto;
+      vertical-align: -0.05em;
+      color: var(--sc-ink) !important;
+    }
+
+    /* Hero Portrait Link & Bio Portrait Framing */
+    .hero-portrait-link {
+      position: absolute;
+      left: 50%;
+      bottom: var(--hero-image-bottom, 24px);
+      transform: translateX(-50%);
+      width: clamp(160px, 28svh, 280px);
+      aspect-ratio: 20/23;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      background: var(--surface-strong);
+    }
+    .hero-portrait-link img,
+    .portrait-face img,
+    .bio-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      filter: grayscale(100%);
+    }
+
+    /* Portrait Journey & Card */
+    .portrait-journey {
+      position: absolute;
+      inset: 0 0 auto;
+      z-index: 10;
+      pointer-events: none;
+      display: none;
+    }
+    .portrait-motion-ready .portrait-journey {
+      display: block;
+      visibility: hidden;
+    }
+    .portrait-motion-active .portrait-journey {
+      visibility: visible;
+    }
+    .portrait-motion-active .hero-portrait-link img,
+    .portrait-motion-active .bio-portrait img {
+      opacity: 0;
+    }
+    .portrait-sticky-stage {
+      height: 100vh;
+      position: sticky;
+      top: 0;
+    }
+    .portrait-card {
+      position: absolute;
+      transform-style: preserve-3d;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .portrait-face {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      backface-visibility: hidden;
+      overflow: hidden;
+    }
+    .portrait-face-back {
+      transform: rotateY(180deg);
+    }
+
+    /* Bio Section */
+    .biography {
+      position: relative;
+      z-index: 1;
+      padding-block: clamp(120px, 20svh, 240px) 100px;
+    }
+    .bio-portrait {
+      aspect-ratio: 20/23;
+      border-radius: 16px;
+      margin: 0 auto;
+      max-width: 320px;
+      width: 100%;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+      background: var(--surface-strong);
+    }
+
+    /* Skills Specimen Pills in Light and Dark Mode */
+    html[data-theme="light"] .skills-type-mosaic li {
+      background: #ffffff !important;
+      color: #141414 !important;
+      border: 1px solid #dedcd7 !important;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    html[data-theme="dark"] .skills-type-mosaic li {
+      background: #141418 !important;
+      color: #f5f4f0 !important;
+      border: 1px solid #26262b !important;
+    }
+
+    /* Project Folders Grid */
+    .project-folder-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+      padding-top: 32px;
+    }
+    @media (max-width: 1100px) {
+      .project-folder-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+      }
+    }
+    @media (max-width: 600px) {
+      .project-folder-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+    }
+
+    /* Folder Papers & Colors */
+    .project-folder {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      text-align: left;
+      width: 100%;
+    }
+    .folder-scene {
+      position: relative;
+      height: 250px;
+      perspective: 1000px;
+      transform: rotateY(var(--folder-lean, 0deg));
+      transition: transform 0.2s ease-out;
+    }
+    .folder-back {
+      position: absolute;
+      inset: 0;
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-radius: 12px;
+    }
+    .folder-back:before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 0;
+      width: 90px;
+      height: 14px;
+      background: #18181b;
+      border: 1px solid #27272a;
+      border-bottom: none;
+      border-radius: 8px 8px 0 0;
+    }
+    .folder-paper-preview {
+      position: absolute;
+      top: 18px;
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      background: #ffffff !important;
+      color: #121214 !important;
+      border-radius: 8px;
+      padding: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      z-index: 2;
+    }
+    .project-folder:hover .folder-paper-preview {
+      transform: translateY(-28px);
+    }
+    .folder-front {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 155px;
+      background: #1f1f23;
+      border: 1px solid #333338;
+      border-radius: 0 0 12px 12px;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      z-index: 3;
+      transform-origin: bottom center;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s;
+    }
+    .project-folder:hover .folder-front {
+      transform: rotateX(-22deg);
+      background: #242429;
+    }
+    .folder-front-title {
+      color: #f5f4f0 !important;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.25;
+      max-width: 80%;
+    }
+    .folder-open-icon {
+      color: #f5f4f0 !important;
+    }
+    .folder-caption {
+      display: block;
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--sc-ink-soft);
+    }
+
+    /* Case Study Expansion Panel */
+    .project-details-panel {
+      background: var(--sc-surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: clamp(24px, 4vw, 44px);
+      margin-top: 36px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    .project-panel-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+    .project-panel-toolbar span {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--sc-ink-soft);
+    }
+    .case-study-hero-card {
+      background: var(--surface-strong);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .case-study-hero-card h3 {
+      margin: 0 0 8px 0;
+      font-size: clamp(22px, 3vw, 32px);
+      color: var(--sc-ink);
+    }
+    .case-study-hero-card .badge {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--sc-ink);
+      color: var(--sc-canvas);
+      margin-bottom: 12px;
+    }
+    .case-study-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 32px;
+    }
+    @media (max-width: 800px) {
+      .case-study-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+    .case-study-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .case-study-tag {
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: 6px;
+      background: var(--sc-surface);
+      color: var(--sc-ink);
+      border: 1px solid var(--line);
+    }
+
+    /* Experience Journey Roadmap Curve */
+    html[data-theme="light"] .journey-road-base { stroke: #dedcd7 !important; }
+    html[data-theme="light"] .journey-road-ink { stroke: #141414 !important; }
+    html[data-theme="light"] .journey-stop-marker { background: #ffffff !important; border-color: #141414 !important; }
+    html[data-theme="light"] .journey-stop-marker span { background: #141414 !important; }
+    html[data-theme="dark"] .journey-road-base { stroke: #262626 !important; }
+    html[data-theme="dark"] .journey-road-ink { stroke: #f5f4f0 !important; }
+    html[data-theme="dark"] .journey-stop-marker { background: #121316 !important; border-color: #f5f4f0 !important; }
+    html[data-theme="dark"] .journey-stop-marker span { background: #f5f4f0 !important; }
+
+    /* Footer Crowd Stage */
+    .footer-crowd-scene {
+      position: relative;
+      width: 100%;
+      height: clamp(360px, 42vh, 400px);
+      background: #f7f4f0 !important;
+      overflow: hidden;
+      display: block;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
+    .footer-crowd-name {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: min(24vw, 240px);
+      font-weight: 900;
+      color: rgba(0, 0, 0, 0.05);
+      letter-spacing: -0.04em;
+      pointer-events: none;
+      user-select: none;
+      line-height: 1;
+    }
+    .footer-crowd-layer {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    .footer-crowd-back { z-index: 1; }
+    .footer-crowd-portrait {
+      position: absolute;
+      bottom: 12px !important;
+      left: 50%;
+      transform: translateX(-50%);
+      height: min(365px, 100% - 20px) !important;
+      width: auto !important;
+      max-width: none !important;
+      z-index: 2;
+      pointer-events: none;
+      object-fit: contain;
+    }
+    .footer-crowd-front { z-index: 3; }
+  </style>
+</head>
+
+<body>
+  <!-- Header / Floating Pill Navbar -->
+  <header class="site-header">
+    <div class="floating-pill-nav">
+      <a class="brand-pill" href="#about" aria-label="Waleed Hassan Home">Waleed</a>
+      <div class="nav-actions">
+        <button type="button" aria-label="Switch to light mode" aria-pressed="false" class="theme-toggle">
+          <span class="wave-icon-track">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+            </span>
+          </span>
+        </button>
+        <button type="button" class="nav-menu-trigger" aria-label="Open navigation menu" aria-controls="navigation-panel">···</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Drawer Dialog -->
+  <dialog id="navigation-panel" class="nav-dialog" aria-label="Navigation menu" style="padding:0; border:none; background:transparent; max-width:100vw; max-height:100vh;">
+    <div class="nav-panel" style="position:fixed; inset:0; background:rgba(14,15,18,0.96); backdrop-filter:blur(24px); display:flex; flex-direction:column; justify-content:space-between; padding:clamp(32px, 6vw, 64px); color:#f5f4f0; z-index:9999;">
+      <div class="nav-panel-top" style="display:flex; justify-content:space-between; align-items:center;">
+        <span style="font-weight:700; font-size:20px; letter-spacing:-0.02em;">Waleed Hassan</span>
+        <button type="button" class="nav-panel-close" aria-label="Close navigation menu" style="background:#222; border:1px solid #333; color:#fff; border-radius:50%; width:44px; height:44px; font-size:22px; cursor:pointer; display:flex; align-items:center; justify-content:center;">✕</button>
+      </div>
+      <nav class="nav-panel-links" style="display:flex; flex-direction:column; gap:clamp(16px, 3vh, 32px);">
+        <a href="#about" style="font-size:clamp(36px, 6vw, 64px); font-weight:800; color:#f5f4f0; text-decoration:none; letter-spacing:-0.03em;">About</a>
+        <a href="#skills" style="font-size:clamp(36px, 6vw, 64px); font-weight:800; color:#f5f4f0; text-decoration:none; letter-spacing:-0.03em;">Skills</a>
+        <a href="#projects" style="font-size:clamp(36px, 6vw, 64px); font-weight:800; color:#f5f4f0; text-decoration:none; letter-spacing:-0.03em;">Projects</a>
+        <a href="#experience" style="font-size:clamp(36px, 6vw, 64px); font-weight:800; color:#f5f4f0; text-decoration:none; letter-spacing:-0.03em;">Experience</a>
+        <a href="#contact" style="font-size:clamp(36px, 6vw, 64px); font-weight:800; color:#f5f4f0; text-decoration:none; letter-spacing:-0.03em;">Contact</a>
+      </nav>
+      <div class="nav-panel-bottom" style="display:flex; justify-content:space-between; align-items:flex-end; border-top:1px solid rgba(255,255,255,0.1); padding-top:24px; font-size:14px; color:#888;">
+        <div>
+          <a href="mailto:grw2206420@outlook.com" style="color:#f5f4f0; text-decoration:none; font-weight:600;">grw2206420@outlook.com</a>
+          <div>BSc Computer Science @ UET Lahore · Gujranwala, Pakistan</div>
+        </div>
+        <div style="display:flex; gap:16px;">
+          <a href="https://github.com/Waleedhasn" target="_blank" rel="noopener noreferrer" style="color:#f5f4f0; text-decoration:none;">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/waleed-hassan-98768b330" target="_blank" rel="noopener noreferrer" style="color:#f5f4f0; text-decoration:none;">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Section 1: About, Hero & 3D Morphing Stage -->
+  <section id="about" class="about-section">
+    <!-- 3D Scroll Journey Stage -->
+    <div class="portrait-journey" aria-hidden="true">
+      <div class="portrait-sticky-stage">
+        <div class="portrait-card">
+          <div class="portrait-face portrait-face-front">
+            <img alt="Waleed Hassan Portrait Front" src="./bg.jpg"/>
+          </div>
+          <div class="portrait-face portrait-face-back">
+            <img alt="Waleed Hassan Portrait Back" src="./bg.jpg"/>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero wrap" data-sc-act="flow" data-hero-intro="done">
+      <!-- Background Code Fallback & Canvas -->
+      <div class="glyph-background hero-code-background" data-slot="glyph-background" aria-hidden="true">
+        <pre class="glyph-code-fallback">const waleed = {
+  name: "Waleed Hassan",
+  role: "Computer Scientist, Web Developer & AI Application Builder",
+  institution: "University of Engineering and Technology, Lahore",
+  degree: "BSc Computer Science",
+  location: "Gujranwala, Pakistan",
+  email: "grw2206420@outlook.com",
+  socials: {
+    github: "https://github.com/Waleedhasn",
+    linkedin: "https://www.linkedin.com/in/waleed-hassan-98768b330"
+  },
+  projects: {
+    "Assignment Management System": "Python · DSA · Queue Logic",
+    "Thesis Management System": "SQL · MySQL · Relational Schema",
+    "Solitaire Game": "C++ · Game Logic · Algorithms",
+    "Inventory Management System": "C# · OOP · Store Architecture"
+  },
+  skills: {
+    languages: ["TypeScript", "JavaScript", "Python", "C++", "C#", "HTML5", "CSS3", "React", "Astro", "Tailwind CSS"],
+    ai: ["Prompt Engineering", "Conversational AI Architecture", "Client-Side RAG", "OpenAI API", "Gemini API"],
+    core: ["SQL", "MySQL", "Relational Schema Design", "Git", "GitHub", "Linux/Bash", "WCAG AA", "Mobile-First"]
+  }
+};</pre>
+        <canvas></canvas>
+      </div>
+
+      <!-- Anchor Link for Hero Portrait -->
+      <a href="#biography" class="hero-portrait-link" aria-label="About Waleed Hassan">
+        <img alt="Waleed Hassan in black and white" src="./bg.jpg"/>
+      </a>
+
+      <!-- Hero Heading Composition -->
+      <div class="hero-heading-composition">
+        <h1 class="hero-title hero-display-title" aria-label="Computer Scientist">
+          <span class="title-line" aria-hidden="true">
+            <span class="hero-word">
+              <span class="hero-code-open hero-code-mark" aria-hidden="true">
+                <svg viewBox="20 0 110 160" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
+                  <path class="hero-code-depth" opacity=".16" d="M105 30 48 80 105 130" transform="translate(5 6)"></path>
+                  <path d="M105 30 48 80 105 130"></path>
+                </svg>
+              </span>
+              <span class="hero-letter-window"><span class="hero-letter">C</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">O</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">M</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">P</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">U</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">T</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">E</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">R</span></span>
+            </span>
+          </span>
+          <span class="title-line" aria-hidden="true">
+            <span class="hero-word">
+              <span class="hero-code-close hero-code-mark" aria-hidden="true">
+                <svg viewBox="0 0 180 160" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="square" stroke-linejoin="miter" focusable="false">
+                  <path class="hero-code-depth" opacity=".16" d="M65 30 25 130M100 30 157 80 100 130" transform="translate(5 6)"></path>
+                  <path d="M65 30 25 130M100 30 157 80 100 130"></path>
+                </svg>
+              </span>
+              <span class="hero-letter-window"><span class="hero-letter">S</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">C</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">I</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">E</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">N</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">T</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">I</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">S</span></span>
+              <span class="hero-letter-window"><span class="hero-letter">T</span></span>
+            </span>
+          </span>
+        </h1>
+      </div>
+
+      <!-- Hero Footer Elements -->
+      <div class="hero-footer">
+        <span class="hero-year">©2026</span>
+        <span class="hero-focus">
+          <span class="terminal-text">
+            <span aria-hidden="true">[[ </span>
+            <span>WEB DEVELOPMENT &amp; AI SYSTEMS</span>
+            <span class="terminal-caret" aria-hidden="true"></span>
+            <span aria-hidden="true"> ]]</span>
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Biography Section (Center 3-Column Reveal) -->
+    <div id="biography" class="biography wrap measure-content" data-sc-act="flow">
+      <div class="bio-introduction">
+        <h2>Hi, I&#x27;m<br/> Waleed.</h2>
+        <p class="bio-role">Computer Scientist <span>&amp; Web Developer.</span></p>
+        <div class="bio-current">
+          <span>Currently at</span>
+          <p>
+            <strong>University of Engineering and Technology, Lahore</strong><br/>
+            BSc Computer Science<br/>
+            <span>Gujranwala, Pakistan</span>
+          </p>
+        </div>
+      </div>
+
+      <figure class="bio-portrait">
+        <img alt="Portrait of Waleed Hassan" loading="lazy" src="./bg.jpg"/>
+      </figure>
+
+      <div class="bio-description">
+        <p class="bio-lead">Computer Science undergraduate at UET Lahore specializing in <strong>responsive web development</strong>, <strong>conversational AI architectures</strong>, relational database systems, and <strong>algorithmic software engineering</strong> with strict typing and clean architecture.</p>
+        <div class="bio-actions">
+          <a class="bio-projects wave-target" href="#projects">
+            <span class="wave-text">
+              <span class="sr-only">Explore projects</span>
+              <span class="wave-words" aria-hidden="true">
+                <span class="wave-window"><span class="wave-glyph" data-char="Explore">Explore</span></span>
+                <span class="wave-window"><span class="wave-glyph" data-char="projects">projects</span></span>
+              </span>
+            </span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Tech Stack Grid -->
+  <section id="skills" class="skills-section section-pad" data-sc-act="flow">
+    <div class="wrap">
+      <div class="skills-heading">
+        <h2>Tech Stack</h2>
+        <p>The tools behind<br/> my work.</p>
+      </div>
+      <div class="skills-specimens">
+        <!-- Group 1: Languages & Frameworks -->
+        <article class="skills-specimen" aria-labelledby="skills-languages-title">
+          <h3 id="skills-languages-title">Languages &amp; Frameworks</h3>
+          <p class="skills-specimen-note">Modern typed languages, responsive UI systems, and algorithmic development.</p>
+          <ul class="skills-type-mosaic">
+            <li>TypeScript</li>
+            <li>JavaScript (ES6+)</li>
+            <li>Python</li>
+            <li>C++</li>
+            <li>C#</li>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>React</li>
+            <li>Astro</li>
+            <li>Tailwind CSS</li>
+            <li>Lucide React</li>
+          </ul>
+        </article>
+
+        <!-- Group 2: AI & Retrieval Engineering -->
+        <article class="skills-specimen" aria-labelledby="skills-ai-title">
+          <h3 id="skills-ai-title">AI &amp; Retrieval Engineering</h3>
+          <p class="skills-specimen-note">Conversational agents, retrieval-augmented pipelines, and LLM integrations.</p>
+          <ul class="skills-type-mosaic">
+            <li>Prompt Engineering</li>
+            <li>Conversational AI Architecture</li>
+            <li>Client-Side RAG</li>
+            <li>OpenAI API</li>
+            <li>Gemini API</li>
+            <li>Anthropic API</li>
+          </ul>
+        </article>
+
+        <!-- Group 3: Databases, Tools & Core Practices -->
+        <article class="skills-specimen" aria-labelledby="skills-tools-title">
+          <h3 id="skills-tools-title">Databases, Tools &amp; Practices</h3>
+          <p class="skills-specimen-note">Relational schema architecture, system workflows, and production practices.</p>
+          <ul class="skills-type-mosaic">
+            <li>SQL</li>
+            <li>MySQL</li>
+            <li>Relational Schema Design</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Linux / Bash</li>
+            <li>npm</li>
+            <li>Vite</li>
+            <li>WCAG AA Accessibility</li>
+            <li>Mobile-First Architecture</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Featured Projects (3D Skeuomorphic Folders) -->
+  <section id="projects" class="projects-section wrap section-pad measure-content" data-sc-act="flow">
+    <div class="section-heading">
+      <h2>Featured<br/>Projects</h2>
+      <a href="https://github.com/Waleedhasn" target="_blank" rel="noopener noreferrer" class="text-link wave-target">
+        <span class="wave-text">
+          <span class="sr-only">GitHub</span>
+          <span class="wave-words" aria-hidden="true">
+            <span class="wave-window"><span class="wave-glyph" data-char="GitHub">GitHub</span></span>
+          </span>
+        </span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+      </a>
+    </div>
+    <p class="projects-intro">Independent projects and professional software. Open a folder to explore technical details and architecture.</p>
+
+    <!-- 4 Skeuomorphic Folders Grid -->
+    <div class="project-folder-grid">
+      <!-- Folder 1: Assignment Management System -->
+      <button type="button" class="project-folder" data-folder-id="assignment-management-system" aria-expanded="false" aria-controls="project-details-panel">
+        <span class="sr-only">Assignment Management System</span>
+        <span class="folder-scene" aria-hidden="true">
+          <span class="folder-back"></span>
+          <span class="folder-paper folder-paper-preview">
+            <div>
+              <span style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#0b0b0b; background:#e0e0e0; padding:2px 6px; border-radius:4px;">ALGORITHMS &amp; DSA</span>
+              <strong style="display:block; margin-top:8px; font-size:15px; color:#111; line-height:1.2;">Assignment Management</strong>
+              <span style="font-size:12px; color:#555; display:block; margin-top:4px;">Python · Queue Logic · DSA</span>
+            </div>
+            <span style="font-size:12px; font-weight:600; color:#111; display:flex; align-items:center; gap:4px;">Click to view ↗</span>
+          </span>
+          <span class="folder-front">
+            <span class="folder-front-title">Assignment Management System</span>
+            <span class="folder-open-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            </span>
+          </span>
+        </span>
+        <span class="folder-caption">
+          <span>ALGORITHMS &amp; DSA</span>
+          <span class="folder-caption-action">View details ↗</span>
+        </span>
+      </button>
+
+      <!-- Folder 2: Thesis Management System -->
+      <button type="button" class="project-folder" data-folder-id="thesis-management-system" aria-expanded="false" aria-controls="project-details-panel">
+        <span class="sr-only">Thesis Management System</span>
+        <span class="folder-scene" aria-hidden="true">
+          <span class="folder-back"></span>
+          <span class="folder-paper folder-paper-preview">
+            <div>
+              <span style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#0b0b0b; background:#e0e0e0; padding:2px 6px; border-radius:4px;">DATABASE ARCHITECTURE</span>
+              <strong style="display:block; margin-top:8px; font-size:15px; color:#111; line-height:1.2;">Thesis Management</strong>
+              <span style="font-size:12px; color:#555; display:block; margin-top:4px;">SQL · MySQL · Relational</span>
+            </div>
+            <span style="font-size:12px; font-weight:600; color:#111; display:flex; align-items:center; gap:4px;">Click to view ↗</span>
+          </span>
+          <span class="folder-front">
+            <span class="folder-front-title">Thesis Management System</span>
+            <span class="folder-open-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            </span>
+          </span>
+        </span>
+        <span class="folder-caption">
+          <span>DATABASE ARCHITECTURE</span>
+          <span class="folder-caption-action">View details ↗</span>
+        </span>
+      </button>
+
+      <!-- Folder 3: Solitaire Game -->
+      <button type="button" class="project-folder" data-folder-id="solitaire-game" aria-expanded="false" aria-controls="project-details-panel">
+        <span class="sr-only">Solitaire Game</span>
+        <span class="folder-scene" aria-hidden="true">
+          <span class="folder-back"></span>
+          <span class="folder-paper folder-paper-preview">
+            <div>
+              <span style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#0b0b0b; background:#e0e0e0; padding:2px 6px; border-radius:4px;">GAME ENGINEERING</span>
+              <strong style="display:block; margin-top:8px; font-size:15px; color:#111; line-height:1.2;">Solitaire Game (C++)</strong>
+              <span style="font-size:12px; color:#555; display:block; margin-top:4px;">C++ · State Machines · Logic</span>
+            </div>
+            <span style="font-size:12px; font-weight:600; color:#111; display:flex; align-items:center; gap:4px;">Click to view ↗</span>
+          </span>
+          <span class="folder-front">
+            <span class="folder-front-title">Solitaire Game</span>
+            <span class="folder-open-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            </span>
+          </span>
+        </span>
+        <span class="folder-caption">
+          <span>GAME ENGINEERING</span>
+          <span class="folder-caption-action">View details ↗</span>
+        </span>
+      </button>
+
+      <!-- Folder 4: Inventory Management System -->
+      <button type="button" class="project-folder" data-folder-id="inventory-management-system" aria-expanded="false" aria-controls="project-details-panel">
+        <span class="sr-only">Inventory Management System</span>
+        <span class="folder-scene" aria-hidden="true">
+          <span class="folder-back"></span>
+          <span class="folder-paper folder-paper-preview">
+            <div>
+              <span style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#0b0b0b; background:#e0e0e0; padding:2px 6px; border-radius:4px;">STORE &amp; INVENTORY</span>
+              <strong style="display:block; margin-top:8px; font-size:15px; color:#111; line-height:1.2;">Inventory Management</strong>
+              <span style="font-size:12px; color:#555; display:block; margin-top:4px;">C# · OOP · Store Architecture</span>
+            </div>
+            <span style="font-size:12px; font-weight:600; color:#111; display:flex; align-items:center; gap:4px;">Click to view ↗</span>
+          </span>
+          <span class="folder-front">
+            <span class="folder-front-title">Inventory Management System</span>
+            <span class="folder-open-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+            </span>
+          </span>
+        </span>
+        <span class="folder-caption">
+          <span>STORE ARCHITECTURE</span>
+          <span class="folder-caption-action">View details ↗</span>
+        </span>
+      </button>
+    </div>
+
+    <!-- Case Study & Project Details Expansion Panel -->
+    <div id="project-details-panel" class="project-details-panel" hidden="" tabindex="-1" role="region">
+      <div class="project-panel-toolbar">
+        <span>Project details</span>
+        <button type="button" aria-label="Close project details" class="wave-target icon-button" style="background:none; border:none; color:var(--sc-ink); cursor:pointer; padding:6px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+        </button>
+      </div>
+
+      <div class="project-studies">
+        <!-- Study 1: Assignment Management System -->
+        <article hidden="" class="project-study" data-project-id="assignment-management-system" data-category="ALGORITHMS &amp; DSA">
+          <div class="case-study-hero-card">
+            <span class="badge">ALGORITHMS &amp; DSA</span>
+            <h3>Assignment Management System</h3>
+            <p style="color:var(--sc-ink-soft); font-size:16px; margin:0 0 16px 0;">Algorithmic workflow coordination system designed to automate submissions, deadlines, and evaluations utilizing optimized data structures.</p>
+            <div class="case-study-grid">
+              <div>
+                <h4 style="margin:0 0 8px 0; color:var(--sc-ink); font-size:16px;">Core Architecture</h4>
+                <p style="color:var(--sc-ink-soft); font-size:14px; line-height:1.6; margin:0 0 12px 0;">Designed with optimized queue processing logic to streamline large volumes of student submissions, enforcing strict deadline cutoffs, automated verification checkpoints, and priority queues for faculty evaluations.</p>
+                <div class="case-study-tags">
+                  <span class="case-study-tag">Python</span>
+                  <span class="case-study-tag">DSA</span>
+                  <span class="case-study-tag">Queue Logic</span>
+                  <span class="case-study-tag">Algorithmic Optimization</span>
+                </div>
+              </div>
+              <div style="background:var(--sc-canvas); padding:16px; border-radius:10px; border:1px solid var(--line);">
+                <div style="font-size:12px; font-weight:700; text-transform:uppercase; color:var(--sc-ink-soft); margin-bottom:8px;">Project Specifications</div>
+                <div style="font-size:13px; line-height:1.7;">
+                  <div><strong>Focus:</strong> Automated Submissions &amp; Deadlines</div>
+                  <div><strong>Design:</strong> Modular Queue &amp; Evaluation Pipeline</div>
+                  <div><strong>Role:</strong> System Architect &amp; Core Engineer</div>
+                </div>
+                <div style="margin-top:16px;">
+                  <a href="https://github.com/Waleedhasn" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; color:var(--sc-ink); font-weight:600; text-decoration:none; font-size:14px;">
+                    View on GitHub ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Study 2: Thesis Management System -->
+        <article hidden="" class="project-study" data-project-id="thesis-management-system" data-category="DATABASE ARCHITECTURE">
+          <div class="case-study-hero-card">
+            <span class="badge">DATABASE ARCHITECTURE</span>
+            <h3>Thesis Management System</h3>
+            <p style="color:var(--sc-ink-soft); font-size:16px; margin:0 0 16px 0;">Relational database application engineered to coordinate undergraduate thesis proposals, evaluations, and supervisor allocations.</p>
+            <div class="case-study-grid">
+              <div>
+                <h4 style="margin:0 0 8px 0; color:var(--sc-ink); font-size:16px;">Relational Schema &amp; Quota Logic</h4>
+                <p style="color:var(--sc-ink-soft); font-size:14px; line-height:1.6; margin:0 0 12px 0;">Engineered with a 3NF normalized MySQL database ensuring data integrity across thesis milestones, committee evaluations, supervisor workload capacities, and departmental defense schedules.</p>
+                <div class="case-study-tags">
+                  <span class="case-study-tag">SQL</span>
+                  <span class="case-study-tag">MySQL</span>
+                  <span class="case-study-tag">Relational Schema Design</span>
+                  <span class="case-study-tag">Constraint Verification</span>
+                </div>
+              </div>
+              <div style="background:var(--sc-canvas); padding:16px; border-radius:10px; border:1px solid var(--line);">
+                <div style="font-size:12px; font-weight:700; text-transform:uppercase; color:var(--sc-ink-soft); margin-bottom:8px;">Project Specifications</div>
+                <div style="font-size:13px; line-height:1.7;">
+                  <div><strong>Focus:</strong> Academic Proposal &amp; Supervisor Tracking</div>
+                  <div><strong>Database:</strong> Normalized MySQL Relational Schema</div>
+                  <div><strong>Role:</strong> Database Architect &amp; Backend Developer</div>
+                </div>
+                <div style="margin-top:16px;">
+                  <a href="https://github.com/Waleedhasn" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; color:var(--sc-ink); font-weight:600; text-decoration:none; font-size:14px;">
+                    View on GitHub ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Study 3: Solitaire Game -->
+        <article hidden="" class="project-study" data-project-id="solitaire-game" data-category="GAME ENGINEERING">
+          <div class="case-study-hero-card">
+            <span class="badge">GAME ENGINEERING</span>
+            <h3>Solitaire Game (C++)</h3>
+            <p style="color:var(--sc-ink-soft); font-size:16px; margin:0 0 16px 0;">Classic card game built in C++ featuring deck shuffling logic, legal move verification algorithms, and low-latency state machines.</p>
+            <div class="case-study-grid">
+              <div>
+                <h4 style="margin:0 0 8px 0; color:var(--sc-ink); font-size:16px;">State Machines &amp; Move Verification</h4>
+                <p style="color:var(--sc-ink-soft); font-size:14px; line-height:1.6; margin:0 0 12px 0;">Engineered in C++ with low memory overhead, featuring Fisher-Yates card shuffling, tableau cascade rules, undo/redo state stacks, and deterministic legal move checking algorithms.</p>
+                <div class="case-study-tags">
+                  <span class="case-study-tag">C++</span>
+                  <span class="case-study-tag">Game Logic</span>
+                  <span class="case-study-tag">State Machines</span>
+                  <span class="case-study-tag">Memory Optimization</span>
+                </div>
+              </div>
+              <div style="background:var(--sc-canvas); padding:16px; border-radius:10px; border:1px solid var(--line);">
+                <div style="font-size:12px; font-weight:700; text-transform:uppercase; color:var(--sc-ink-soft); margin-bottom:8px;">Project Specifications</div>
+                <div style="font-size:13px; line-height:1.7;">
+                  <div><strong>Focus:</strong> Low-Latency State Machine &amp; Rule Engine</div>
+                  <div><strong>Language:</strong> Modern C++ (OOP Architecture)</div>
+                  <div><strong>Role:</strong> Game Systems Developer</div>
+                </div>
+                <div style="margin-top:16px;">
+                  <a href="https://github.com/Waleedhasn" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; color:var(--sc-ink); font-weight:600; text-decoration:none; font-size:14px;">
+                    View on GitHub ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Study 4: Inventory Management System -->
+        <article hidden="" class="project-study" data-project-id="inventory-management-system" data-category="STORE ARCHITECTURE">
+          <div class="case-study-hero-card">
+            <span class="badge">STORE &amp; INVENTORY MANAGEMENT</span>
+            <h3>Inventory Management System</h3>
+            <p style="color:var(--sc-ink-soft); font-size:16px; margin:0 0 16px 0;">Object-oriented store and stock management desktop application featuring automated thresholds, catalog ledgers, and transaction logging.</p>
+            <div class="case-study-grid">
+              <div>
+                <h4 style="margin:0 0 8px 0; color:var(--sc-ink); font-size:16px;">Object-Oriented Architecture &amp; Ledgers</h4>
+                <p style="color:var(--sc-ink-soft); font-size:14px; line-height:1.6; margin:0 0 12px 0;">Built with C# utilizing OOP design patterns for store management. Features automated restock threshold warnings, item categorization, barcode-ready SKU ledgers, and tamper-resistant transaction histories.</p>
+                <div class="case-study-tags">
+                  <span class="case-study-tag">C#</span>
+                  <span class="case-study-tag">OOP</span>
+                  <span class="case-study-tag">Store Architecture</span>
+                  <span class="case-study-tag">Transaction Ledgers</span>
+                </div>
+              </div>
+              <div style="background:var(--sc-canvas); padding:16px; border-radius:10px; border:1px solid var(--line);">
+                <div style="font-size:12px; font-weight:700; text-transform:uppercase; color:var(--sc-ink-soft); margin-bottom:8px;">Project Specifications</div>
+                <div style="font-size:13px; line-height:1.7;">
+                  <div><strong>Focus:</strong> Automated Thresholds &amp; Stock Ledgers</div>
+                  <div><strong>Stack:</strong> C# / .NET / Object-Oriented Design</div>
+                  <div><strong>Role:</strong> Software &amp; Desktop Architect</div>
+                </div>
+                <div style="margin-top:16px;">
+                  <a href="https://github.com/Waleedhasn" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; color:var(--sc-ink); font-weight:600; text-decoration:none; font-size:14px;">
+                    View on GitHub ↗
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Experience Timeline (Dynamic Sinusoidal SVG Roadmap) -->
+  <section id="experience" class="experience-section section-pad" data-sc-act="flow">
+    <div class="wrap">
+      <div class="experience-heading">
+        <h2>Experience.</h2>
+        <p>Verified milestones.<br/> Academic &amp; practice timeline.</p>
+      </div>
+
+      <div class="journey-roadmap">
+        <svg class="journey-road" viewBox="0 0 1 1" preserveAspectRatio="none" aria-hidden="true">
+          <path class="journey-road-base" d=""></path>
+          <path class="journey-road-ink" d="" pathLength="1"></path>
+        </svg>
+
+        <!-- Node 1: Present — BSc Computer Science -->
+        <article class="journey-stop journey-now" aria-labelledby="stop-1-title">
+          <span class="journey-stop-marker" aria-hidden="true"><span></span></span>
+          <div class="journey-stop-content">
+            <p class="journey-date"><span class="journey-current">Current role</span>Present</p>
+            <h3 id="stop-1-title">BSc Computer Science</h3>
+            <p class="journey-place">University of Engineering and Technology <span>Lahore</span></p>
+            <p class="journey-description">Pursuing undergraduate Computer Science studies focused on algorithms, relational database architecture, and modern web engineering.</p>
+          </div>
+        </article>
+
+        <!-- Node 2: Verified Employment — Data Entry Specialist -->
+        <article class="journey-stop journey-freelance" aria-labelledby="stop-2-title">
+          <span class="journey-stop-marker" aria-hidden="true"><span></span></span>
+          <div class="journey-stop-content">
+            <p class="journey-date"><span class="journey-current">Verified Employment</span></p>
+            <h3 id="stop-2-title">Data Entry Specialist</h3>
+            <p class="journey-place">H&amp;R Mega Market</p>
+            <p class="journey-description">Managed operational data entry processes, maintaining accurate catalog records, inventory logging, and transactional consistency with high attention to detail.</p>
+          </div>
+        </article>
+
+        <!-- Node 3: Practice Area — Web Development -->
+        <article class="journey-stop journey-masters" aria-labelledby="stop-3-title">
+          <span class="journey-stop-marker" aria-hidden="true"><span></span></span>
+          <div class="journey-stop-content">
+            <p class="journey-date"><span class="journey-current">Practice Area</span></p>
+            <h3 id="stop-3-title">Web Development</h3>
+            <p class="journey-place">Frontend &amp; AI Systems</p>
+            <p class="journey-description">Building responsive mobile-first interfaces, accessible semantic HTML (WCAG AA), and client-side RAG / LLM web integrations.</p>
+          </div>
+        </article>
+
+        <!-- Node 4: Practice Area — Application Development -->
+        <article class="journey-stop journey-internship" aria-labelledby="stop-4-title">
+          <span class="journey-stop-marker" aria-hidden="true"><span></span></span>
+          <div class="journey-stop-content">
+            <p class="journey-date"><span class="journey-current">Practice Area</span></p>
+            <h3 id="stop-4-title">Application Development</h3>
+            <p class="journey-place">Desktop &amp; Relational Systems</p>
+            <p class="journey-description">Architecting object-oriented store management software in C# and normalized MySQL relational database applications.</p>
+          </div>
+        </article>
+
+        <!-- Node 5: Practice Area — Game Development -->
+        <article class="journey-stop journey-bachelors" aria-labelledby="stop-5-title">
+          <span class="journey-stop-marker" aria-hidden="true"><span></span></span>
+          <div class="journey-stop-content">
+            <p class="journey-date"><span class="journey-current">Practice Area</span></p>
+            <h3 id="stop-5-title">Game Development</h3>
+            <p class="journey-place">Systems &amp; C++ Engineering</p>
+            <p class="journey-description">Developing low-latency state machines, deck shuffling algorithms, and deterministic rule verification engines in C++.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Contact / Let's talk -->
+  <section id="contact" class="contact-section section-pad" data-sc-act="flow">
+    <div class="wrap">
+      <div class="contact-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:clamp(32px, 6vw, 64px); align-items:start;">
+        <div>
+          <h2 style="font-size:clamp(44px, 7vw, 80px); font-weight:800; letter-spacing:-0.03em; margin:0 0 16px 0; line-height:0.95;">Let&#x27;s talk.</h2>
+          <p style="font-size:18px; color:var(--sc-ink-soft); margin:0 0 32px 0;">Whether it&#x27;s a full-time role, collaborative engineering, or a web development project, my inbox is open.</p>
+          <div style="display:flex; flex-direction:column; gap:12px; font-size:16px;">
+            <div>
+              <span style="color:var(--sc-ink-soft); font-size:13px; display:block; text-transform:uppercase; letter-spacing:0.05em;">Direct Email</span>
+              <a href="mailto:grw2206420@outlook.com" style="color:var(--sc-ink); font-weight:700; text-decoration:none; font-size:18px;">grw2206420@outlook.com ↗</a>
+            </div>
+            <div style="margin-top:12px;">
+              <span style="color:var(--sc-ink-soft); font-size:13px; display:block; text-transform:uppercase; letter-spacing:0.05em;">Location</span>
+              <span style="color:var(--sc-ink); font-weight:600;">Gujranwala, Pakistan · UET Lahore</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form onsubmit="event.preventDefault(); alert('Thank you, Waleed has received your message!');" style="display:flex; flex-direction:column; gap:20px; background:var(--sc-surface); border:1px solid var(--line); border-radius:18px; padding:clamp(24px, 4vw, 36px);">
+          <div>
+            <label style="display:block; font-size:13px; font-weight:600; color:var(--sc-ink-soft); margin-bottom:8px;">Your name</label>
+            <input type="text" placeholder="What should I call you?" required style="width:100%; box-sizing:border-box; padding:12px 16px; background:var(--surface-strong); border:1px solid var(--line); border-radius:8px; color:var(--sc-ink); font-family:inherit; font-size:15px;"/>
+          </div>
+          <div>
+            <label style="display:block; font-size:13px; font-weight:600; color:var(--sc-ink-soft); margin-bottom:8px;">Email address</label>
+            <input type="email" placeholder="you@company.com" required style="width:100%; box-sizing:border-box; padding:12px 16px; background:var(--surface-strong); border:1px solid var(--line); border-radius:8px; color:var(--sc-ink); font-family:inherit; font-size:15px;"/>
+          </div>
+          <div>
+            <label style="display:block; font-size:13px; font-weight:600; color:var(--sc-ink-soft); margin-bottom:8px;">What do you have in mind?</label>
+            <textarea rows="4" placeholder="Tell me about your project, idea, or role..." required style="width:100%; box-sizing:border-box; padding:12px 16px; background:var(--surface-strong); border:1px solid var(--line); border-radius:8px; color:var(--sc-ink); font-family:inherit; font-size:15px; resize:vertical;"></textarea>
+          </div>
+          <button type="submit" style="padding:14px 24px; background:var(--sc-ink); color:var(--sc-canvas); border:none; border-radius:999px; font-weight:700; font-size:15px; cursor:pointer; align-self:flex-start; transition:opacity 0.2s;">Send message ↗</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Site Footer & Dual-Layer Crowd Animation -->
+  <footer class="site-footer" style="background:#08090b !important; color:#f5f4f0 !important; padding-top:60px;">
+    <div class="footer-top wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:40px; margin-bottom:48px;">
+      <div class="footer-identity">
+        <h2 style="font-size:32px; font-weight:800; margin:0 0 8px 0; color:#fff;">Waleed.</h2>
+        <p style="color:#9a9ba1; margin:0; line-height:1.5;">Computer Scientist &amp;<br/>Web Developer.</p>
+      </div>
+      <nav aria-label="Footer navigation" style="display:flex; flex-direction:column; gap:8px;">
+        <span style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#666;">Explore</span>
+        <div style="display:flex; flex-wrap:wrap; gap:16px;">
+          <a href="#about" style="color:#bdbcb6; text-decoration:none;">About</a>
+          <a href="#skills" style="color:#bdbcb6; text-decoration:none;">Skills</a>
+          <a href="#projects" style="color:#bdbcb6; text-decoration:none;">Projects</a>
+          <a href="#experience" style="color:#bdbcb6; text-decoration:none;">Experience</a>
+          <a href="#contact" style="color:#bdbcb6; text-decoration:none;">Contact</a>
+        </div>
+      </nav>
+      <div class="footer-contact" style="display:flex; flex-direction:column; gap:8px;">
+        <span style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#666;">Get in touch</span>
+        <a href="mailto:grw2206420@outlook.com" style="color:#f5f4f0; text-decoration:none; font-weight:600;">grw2206420@outlook.com ↗</a>
+        <span style="color:#666; font-size:13px; margin-top:4px;">© 2026 Waleed Hassan. All rights reserved.</span>
+      </div>
+    </div>
+
+    <div class="footer-finale">
+      <div class="footer-finale-heading wrap" style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:18px;">
+        <p style="font-size:clamp(32px, 5vw, 56px); font-weight:800; margin:0; color:#fff;">See you around.</p>
+        <a href="#" style="color:#9a9ba1; text-decoration:none; font-size:14px; font-weight:600;">Back to top ↑</a>
+      </div>
+
+      <!-- Animated Dual-Canvas Crowd Stage -->
+      <button type="button" class="footer-crowd-scene" aria-label="Pause crowd animation" aria-pressed="false" data-cast-size="105">
+        <span class="footer-crowd-name" aria-hidden="true">WALEED.</span>
+        <!-- Back Layer (Pedestrians behind) -->
+        <canvas class="footer-crowd-layer footer-crowd-back" aria-hidden="true"></canvas>
+        <!-- Standing Avatar (Waleed in Kurta Shalwar & Peshawari Chappal) -->
+        <img class="footer-crowd-portrait" src="./footer/bengaluru/waleed-standing.png" alt="Waleed Hassan standing avatar" width="375" height="1400" loading="lazy"/>
+        <!-- Front Layer (Pedestrians in front) -->
+        <canvas class="footer-crowd-layer footer-crowd-front" aria-hidden="true"></canvas>
+      </button>
+
+      <div class="footer-scene-bottom wrap" style="padding:16px 0 32px 0;">
+        <small style="color:#777; font-size:13px;">Finally, some traffic on my website.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Interactive Scripts -->
+  <script src="./js/theme.js"></script>
+  <script src="./js/portrait-motion.js"></script>
+  <script src="./js/hero.js"></script>
+  <script src="./js/folders.js"></script>
+  <script src="./js/timeline.js"></script>
+  <script src="./js/crowd.js"></script>
+  <script src="./js/chat.js"></script>
+</body>
+</html>
