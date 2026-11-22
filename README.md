@@ -4,7 +4,7 @@
 > BSc Computer Science @ University of Engineering and Technology (UET), Lahore  
 > Gujranwala, Pakistan  
 > 🌐 **Live Website:** [waleedhassan.vercel.app](https://waleedhassan.vercel.app)  
-> Email: [grw2206420@outlook.com](mailto:grw2206420@outlook.com)  
+> Email: [waleed2206420@gmail.com](mailto:waleed2206420@gmail.com)  
 > GitHub: [github.com/Iwaleedhasan](https://github.com/Iwaleedhasan) • LinkedIn: [linkedin.com/in/waleed-hassan-98768b330](https://www.linkedin.com/in/waleed-hassan-98768b330)
 
 ---
