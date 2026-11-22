@@ -77,6 +77,7 @@
   <!-- Bing & Search Engine Thumbnail Hints -->
   <link rel="image_src" href="https://waleedhassan.vercel.app/profile.jpg?v=2"/>
   <meta name="thumbnail" content="https://waleedhassan.vercel.app/profile.jpg?v=2"/>
+  <meta name="msapplication-TileImage" content="https://waleedhassan.vercel.app/profile.jpg?v=2"/>
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary"/>
@@ -1276,6 +1277,7 @@
           </div>
           <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
             <button type="submit" id="contact-submit-btn" style="padding:14px 28px; background:var(--sc-ink); color:var(--sc-canvas); border:none; border-radius:999px; font-weight:700; font-size:15px; cursor:pointer; align-self:flex-start; transition:all 0.2s;">Send message ↗</button>
+            <a href="mailto:waleed2206420@gmail.com" style="color:var(--sc-ink-soft); font-size:14px; text-decoration:underline;">Or email directly ✉</a>
             <span id="contact-form-status" style="font-size:14px; font-weight:600; display:none;"></span>
           </div>
         </form>
@@ -1287,6 +1289,10 @@
               e.preventDefault();
               var btn = document.getElementById('contact-submit-btn');
               var status = document.getElementById('contact-form-status');
+              var nameVal = (document.getElementById('contact-name').value || '').trim();
+              var emailVal = (document.getElementById('contact-email').value || '').trim();
+              var messageVal = (document.getElementById('contact-message').value || '').trim();
+
               btn.disabled = true;
               btn.textContent = 'Sending...';
               status.style.display = 'inline-block';
@@ -1305,19 +1311,28 @@
               .then(function(data) {
                 btn.disabled = false;
                 btn.textContent = 'Send message ↗';
-                status.style.color = '#10b981';
-                status.textContent = '✓ Thank you! Your message has been sent directly to Waleed.';
-                form.reset();
-                setTimeout(function() {
-                  status.style.display = 'none';
-                }, 8000);
+                if (data && (data.success === "true" || data.success === true)) {
+                  status.style.color = '#10b981';
+                  status.textContent = '✓ Thank you! Your message has been sent directly to Waleed.';
+                  form.reset();
+                  setTimeout(function() {
+                    status.style.display = 'none';
+                  }, 8000);
+                } else if (data && data.message && data.message.indexOf('Activation') !== -1) {
+                  status.style.color = '#38bdf8';
+                  status.innerHTML = 'Action required: Please check your Gmail (including Spam folder) to click "Activate Form" once.';
+                } else {
+                  var mailtoFallback = 'mailto:waleed2206420@gmail.com?subject=' + encodeURIComponent('Portfolio Contact from ' + nameVal) + '&body=' + encodeURIComponent(messageVal + '\n\nSender: ' + emailVal);
+                  status.style.color = '#f59e0b';
+                  status.innerHTML = 'Delivery pending. <a href="' + mailtoFallback + '" style="color:var(--sc-accent); text-decoration:underline; font-weight:700;">Click to send directly via Gmail ↗</a>';
+                }
               })
               .catch(function(err) {
                 btn.disabled = false;
                 btn.textContent = 'Send message ↗';
-                status.style.color = '#ef4444';
-                status.textContent = 'Redirecting to deliver...';
-                form.submit();
+                var mailtoFallback = 'mailto:waleed2206420@gmail.com?subject=' + encodeURIComponent('Portfolio Contact from ' + nameVal) + '&body=' + encodeURIComponent(messageVal + '\n\nSender: ' + emailVal);
+                status.style.color = '#f59e0b';
+                status.innerHTML = 'Network blocked. <a href="' + mailtoFallback + '" style="color:var(--sc-accent); text-decoration:underline; font-weight:700;">Click here to send directly via Gmail / Outlook ↗</a>';
               });
             });
           })();
