@@ -1255,21 +1255,73 @@
         </div>
 
         <!-- Contact Form -->
-        <form onsubmit="event.preventDefault(); alert('Thank you, Waleed has received your message!');" style="display:flex; flex-direction:column; gap:20px; background:var(--sc-surface); border:1px solid var(--line); border-radius:18px; padding:clamp(24px, 4vw, 36px);">
+        <form id="portfolio-contact-form" action="https://formsubmit.co/waleed2206420@gmail.com" method="POST" style="display:flex; flex-direction:column; gap:20px; background:var(--sc-surface); border:1px solid var(--line); border-radius:18px; padding:clamp(24px, 4vw, 36px);">
+          <!-- Anti-spam honeypot and configuration -->
+          <input type="text" name="_honey" style="display:none;"/>
+          <input type="hidden" name="_captcha" value="false"/>
+          <input type="hidden" name="_subject" value="New Portfolio Message from WaleedHassan.vercel.app"/>
+          <input type="hidden" name="_template" value="table"/>
+
           <div>
-            <label style="display:block; font-size:13px; font-weight:600; color:var(--sc-ink-soft); margin-bottom:8px;">Your name</label>
-            <input type="text" placeholder="What should I call you?" required style="width:100%; box-sizing:border-box; padding:12px 16px; background:var(--surface-strong); border:1px solid var(--line); border-radius:8px; color:var(--sc-ink); font-family:inherit; font-size:15px;"/>
+            <label for="contact-name" style="display:block; font-size:13px; font-weight:600; color:var(--sc-ink-soft); margin-bottom:8px;">Your name</label>
+            <input id="contact-name" type="text" name="name" placeholder="What should I call you?" required style="width:100%; box-sizing:border-box; padding:12px 16px; background:var(--surface-strong); border:1px solid var(--line); border-radius:8px; color:var(--sc-ink); font-family:inherit; font-size:15px;"/>
           </div>
           <div>
-            <label style="display:block; font-size:13px; font-weight:600; color:var(--sc-ink-soft); margin-bottom:8px;">Email address</label>
-            <input type="email" placeholder="you@company.com" required style="width:100%; box-sizing:border-box; padding:12px 16px; background:var(--surface-strong); border:1px solid var(--line); border-radius:8px; color:var(--sc-ink); font-family:inherit; font-size:15px;"/>
+            <label for="contact-email" style="display:block; font-size:13px; font-weight:600; color:var(--sc-ink-soft); margin-bottom:8px;">Email address</label>
+            <input id="contact-email" type="email" name="email" placeholder="you@company.com" required style="width:100%; box-sizing:border-box; padding:12px 16px; background:var(--surface-strong); border:1px solid var(--line); border-radius:8px; color:var(--sc-ink); font-family:inherit; font-size:15px;"/>
           </div>
           <div>
-            <label style="display:block; font-size:13px; font-weight:600; color:var(--sc-ink-soft); margin-bottom:8px;">What do you have in mind?</label>
-            <textarea rows="4" placeholder="Tell me about your project, idea, or role..." required style="width:100%; box-sizing:border-box; padding:12px 16px; background:var(--surface-strong); border:1px solid var(--line); border-radius:8px; color:var(--sc-ink); font-family:inherit; font-size:15px; resize:vertical;"></textarea>
+            <label for="contact-message" style="display:block; font-size:13px; font-weight:600; color:var(--sc-ink-soft); margin-bottom:8px;">What do you have in mind?</label>
+            <textarea id="contact-message" name="message" rows="4" placeholder="Tell me about your project, idea, or role..." required style="width:100%; box-sizing:border-box; padding:12px 16px; background:var(--surface-strong); border:1px solid var(--line); border-radius:8px; color:var(--sc-ink); font-family:inherit; font-size:15px; resize:vertical;"></textarea>
           </div>
-          <button type="submit" style="padding:14px 24px; background:var(--sc-ink); color:var(--sc-canvas); border:none; border-radius:999px; font-weight:700; font-size:15px; cursor:pointer; align-self:flex-start; transition:opacity 0.2s;">Send message ↗</button>
+          <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+            <button type="submit" id="contact-submit-btn" style="padding:14px 28px; background:var(--sc-ink); color:var(--sc-canvas); border:none; border-radius:999px; font-weight:700; font-size:15px; cursor:pointer; align-self:flex-start; transition:all 0.2s;">Send message ↗</button>
+            <span id="contact-form-status" style="font-size:14px; font-weight:600; display:none;"></span>
+          </div>
         </form>
+        <script>
+          (function() {
+            var form = document.getElementById('portfolio-contact-form');
+            if (!form) return;
+            form.addEventListener('submit', function(e) {
+              e.preventDefault();
+              var btn = document.getElementById('contact-submit-btn');
+              var status = document.getElementById('contact-form-status');
+              btn.disabled = true;
+              btn.textContent = 'Sending...';
+              status.style.display = 'inline-block';
+              status.style.color = 'var(--sc-ink-soft)';
+              status.textContent = 'Sending message to Waleed...';
+
+              var formData = new FormData(form);
+              fetch('https://formsubmit.co/ajax/waleed2206420@gmail.com', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                  'Accept': 'application/json'
+                }
+              })
+              .then(function(res) { return res.json(); })
+              .then(function(data) {
+                btn.disabled = false;
+                btn.textContent = 'Send message ↗';
+                status.style.color = '#10b981';
+                status.textContent = '✓ Thank you! Your message has been sent directly to Waleed.';
+                form.reset();
+                setTimeout(function() {
+                  status.style.display = 'none';
+                }, 8000);
+              })
+              .catch(function(err) {
+                btn.disabled = false;
+                btn.textContent = 'Send message ↗';
+                status.style.color = '#ef4444';
+                status.textContent = 'Redirecting to deliver...';
+                form.submit();
+              });
+            });
+          })();
+        </script>
       </div>
     </div>
   </section>
