@@ -11,27 +11,53 @@
   <meta name="google-site-verification" content="qRE0D60KkpTHHKOJov1-wMAl6m_5MQnuy95lA2JSGoY" />
   <link rel="canonical" href="https://waleedhassan.vercel.app/"/>
 
-  <!-- Structured Data (JSON-LD) for Google Knowledge Graph & Rich Snippets -->
+  <!-- Structured Data (JSON-LD) for Search Engine Knowledge Graph & Image Snippet -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Waleed Hassan",
-    "url": "https://waleedhassan.vercel.app/",
-    "image": "https://waleedhassan.vercel.app/bg.jpg",
-    "jobTitle": "Computer Scientist & Web Developer",
-    "alumniOf": {
-      "@type": "CollegeOrUniversity",
-      "name": "University of Engineering and Technology (UET), Lahore"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Gujranwala",
-      "addressCountry": "Pakistan"
-    },
-    "sameAs": [
-      "https://github.com/Iwaleedhasan",
-      "https://www.linkedin.com/in/waleed-hassan-98768b330"
+    "@graph": [
+      {
+        "@type": "ProfilePage",
+        "@id": "https://waleedhassan.vercel.app/#profilepage",
+        "url": "https://waleedhassan.vercel.app/",
+        "name": "Waleed Hassan · Computer Scientist & Web Developer",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://waleedhassan.vercel.app/#website",
+          "url": "https://waleedhassan.vercel.app/",
+          "name": "Waleed Hassan Portfolio"
+        },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "@id": "https://waleedhassan.vercel.app/#primaryimage",
+          "url": "https://waleedhassan.vercel.app/profile.jpg",
+          "contentUrl": "https://waleedhassan.vercel.app/profile.jpg",
+          "width": 800,
+          "height": 800,
+          "caption": "Waleed Hassan"
+        },
+        "mainEntity": {
+          "@type": "Person",
+          "@id": "https://waleedhassan.vercel.app/#person",
+          "name": "Waleed Hassan",
+          "url": "https://waleedhassan.vercel.app/",
+          "image": "https://waleedhassan.vercel.app/profile.jpg",
+          "jobTitle": "Computer Scientist & Web Developer",
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "University of Engineering and Technology (UET), Lahore"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Gujranwala",
+            "addressCountry": "Pakistan"
+          },
+          "sameAs": [
+            "https://github.com/Iwaleedhasan",
+            "https://www.linkedin.com/in/waleed-hassan-98768b330"
+          ]
+        }
+      }
     ]
   }
   </script>
@@ -39,20 +65,35 @@
   <!-- Open Graph -->
   <meta property="og:title" content="Waleed Hassan · Computer Scientist &amp; Web Developer"/>
   <meta property="og:description" content="Computer Science undergraduate at UET Lahore specializing in responsive web development, conversational AI architectures, relational database systems, and algorithmic software engineering."/>
-  <meta property="og:type" content="website"/>
+  <meta property="og:type" content="profile"/>
   <meta property="og:url" content="https://waleedhassan.vercel.app/"/>
-  <meta property="og:image" content="https://waleedhassan.vercel.app/bg.jpg"/>
+  <meta property="og:image" content="https://waleedhassan.vercel.app/profile.jpg"/>
+  <meta property="og:image:secure_url" content="https://waleedhassan.vercel.app/profile.jpg"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:width" content="800"/>
+  <meta property="og:image:height" content="800"/>
+  <meta property="og:image:alt" content="Waleed Hassan Profile Photo"/>
+
+  <!-- Bing & Search Engine Thumbnail Hints -->
+  <link rel="image_src" href="https://waleedhassan.vercel.app/profile.jpg"/>
+  <meta name="thumbnail" content="https://waleedhassan.vercel.app/profile.jpg"/>
 
   <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:card" content="summary"/>
   <meta name="twitter:title" content="Waleed Hassan · Computer Scientist &amp; Web Developer"/>
   <meta name="twitter:description" content="Computer Science undergraduate at UET Lahore specializing in responsive web development, conversational AI architectures, relational database systems, and algorithmic software engineering."/>
-  <meta name="twitter:image" content="https://waleedhassan.vercel.app/bg.jpg"/>
+  <meta name="twitter:image" content="https://waleedhassan.vercel.app/profile.jpg"/>
 
-  <link rel="icon" href="./favicon.ico" sizes="any"/>
-  <link rel="icon" href="./icon.svg" type="image/svg+xml"/>
-  <link rel="icon" href="./icon.png" type="image/png" sizes="512x512"/>
-  <link rel="apple-touch-icon" href="./apple-touch-icon.png"/>
+  <!-- Favicons for Google, Bing, Apple, and High-DPI screens -->
+  <link rel="shortcut icon" href="https://waleedhassan.vercel.app/favicon.ico"/>
+  <link rel="icon" type="image/x-icon" href="https://waleedhassan.vercel.app/favicon.ico" sizes="48x48 32x32 16x16"/>
+  <link rel="icon" type="image/png" sizes="48x48" href="https://waleedhassan.vercel.app/favicon-48x48.png"/>
+  <link rel="icon" type="image/png" sizes="96x96" href="https://waleedhassan.vercel.app/favicon-96x96.png"/>
+  <link rel="icon" type="image/png" sizes="144x144" href="https://waleedhassan.vercel.app/favicon-144x144.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="https://waleedhassan.vercel.app/icon-192.png"/>
+  <link rel="icon" type="image/png" sizes="512x512" href="https://waleedhassan.vercel.app/icon.png"/>
+  <link rel="icon" href="https://waleedhassan.vercel.app/icon.svg" type="image/svg+xml"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://waleedhassan.vercel.app/apple-touch-icon.png"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
