@@ -1,6 +1,6 @@
 # Waleed Hassan — Portfolio Website
 
-> **Computer Scientist, Web Developer & AI Application Builder**  
+> **Software Engineer, Web Developer & AI Application Builder**  
 > BSc Computer Science @ University of Engineering and Technology (UET), Lahore  
 > Gujranwala, Pakistan  
 > 🌐 **Live Website:** [waleedhassan.vercel.app](https://waleedhassan.vercel.app)  

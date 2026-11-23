@@ -9,7 +9,8 @@
     ],
     howAreYou: "I'm doing great, thank you for asking! I'm here and ready to help you explore Waleed's software engineering journey. What would you like to know?",
     food: "Waleed is a big fan of pizza! Especially a hot, cheesy pizza while engineering code late at night. What kind of food do you like?",
-    about: "Waleed Hassan is a Computer Science undergraduate at the University of Engineering and Technology (UET), Lahore, living in Gujranwala, Pakistan. He specializes in responsive modern web development, conversational AI architectures, relational database systems, and algorithmic software engineering.",
+    gender: "Waleed is male (he/him). He is a Software Engineer and Computer Science undergraduate at UET Lahore.",
+    about: "Waleed Hassan is a Software Engineer and Computer Science undergraduate at the University of Engineering and Technology (UET), Lahore, living in Gujranwala, Pakistan. He specializes in responsive modern web development, conversational AI architectures, relational database systems, and algorithmic software engineering.",
     education: `Here is Waleed's educational background:
 
 • **BSc Computer Science (2024 – Present)**
@@ -367,6 +368,8 @@ You can also send a direct message using the contact form at the bottom of this 
         answer = KNOWLEDGE.howAreYou;
       } else if (q.includes('food') || q.includes('pizza') || q.includes('eat') || q.includes('dish') || q.includes('favorite meal') || q.includes('favourite food')) {
         answer = KNOWLEDGE.food;
+      } else if (q.includes('gender') || q.includes('sex') || q.includes('male') || q.includes('female') || q.includes('boy') || q.includes('girl') || q.includes('man') || q.includes('pronoun')) {
+        answer = KNOWLEDGE.gender;
       }
       // 2. Education & Academics
       else if (q.includes('education') || q.includes('degree') || q.includes('study') || q.includes('studies') || q.includes('university') || q.includes('college') || q.includes('school') || q.includes('uet') || q.includes('fsc') || q.includes('matric') || q.includes('punjab group') || q.includes('jadeed')) {
