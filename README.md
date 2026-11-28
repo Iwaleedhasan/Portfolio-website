@@ -26,7 +26,7 @@ An interactive, responsive portfolio website built with semantic HTML, CSS, vani
 ## 🚀 Quick Start / Deployment
 
 ### 1. Run Locally
-- Double-click `start.bat` (or run `python server.py`).
+- Run `python server.py`.
 - View at: [http://127.0.0.1:3000](http://127.0.0.1:3000)
 
 ### 2. Hosting on Vercel
@@ -47,8 +47,6 @@ Portfolio website/
 ├── robots.txt / sitemap.xml          # Search engine crawl directives & sitemap
 ├── vercel.json                       # Clean URLs & HTTP security headers (CSP, X-Frame-Options)
 ├── server.py                         # Localhost-only development server (127.0.0.1:3000)
-├── start.bat                         # 1-click local launch script
-├── deploy_to_github.bat              # Safe push helper script to GitHub
 ├── css/
 │   └── style.css                     # Base stylesheet and theme tokens
 ├── js/
