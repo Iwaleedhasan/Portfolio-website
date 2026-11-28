@@ -1,7 +1,7 @@
-// Footer Crowd Canvas Animation - 105 Bengaluru Pedestrians
+// Footer Crowd Canvas Animation - 105 Pedestrians
 (function() {
   const crowdScales = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.7, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 0.95, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
-  const spriteUrls = Array.from({ length: 7 }, (_, i) => `./footer/bengaluru/crowd-${String(i + 1).padStart(2, '0')}.webp`);
+  const spriteUrls = Array.from({ length: 7 }, (_, i) => `./footer/crowd/crowd-${String(i + 1).padStart(2, '0')}.webp`);
 
   function initCrowd() {
     const container = document.querySelector('.footer-crowd-scene');

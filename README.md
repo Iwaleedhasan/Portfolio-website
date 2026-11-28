@@ -11,30 +11,26 @@
 
 ## 🌟 Overview
 
-An interactive, responsive, high-performance static portfolio website built with pure HTML, CSS, and modern JavaScript:
+An interactive, responsive portfolio website built with semantic HTML, CSS, vanilla JavaScript, and a Vercel Serverless contact handler:
 - **Light & Dark Mode Switcher:** Instant, persistent theme switching with smooth Sun/Moon icon toggle.
 - **3D Scroll-Morphing Profile Card:** Seamlessly rotates 180° on scroll and docks into the 3-column biography section.
-- **Categorized Tech Stack Bento:** 3 columns showcasing Languages & Frameworks, AI & Retrieval Engineering, and Databases & Tools.
-- **3D Skeuomorphic Project Folders:** Interactive file folders with mouse-tracking tilt physics, inner preview document lift, and detailed case study drawer modals.
-- **Sinusoidal SVG Experience Roadmap:** Dynamically drawn Bézier curves connecting verified career milestones and academic highlights.
-- **Dual-Layer Canvas Crowd Footer:** 105 pedestrians continuously walking behind and in front of Waleed's standing avatar.
-- **Ask AI Drawer:** Instant on-site interactive assistant answering questions about projects, technical skills, and background.
+- **Categorized Tech Stack Bento:** 3 columns showcasing Languages & Frameworks, AI Tooling, and Databases & Tools.
+- **3D Skeuomorphic Project Folders:** Interactive file folders with mouse-tracking tilt physics, inner preview document lift, and detailed case study panels.
+- **Sinusoidal SVG Experience Roadmap:** Dynamically drawn Bézier curves connecting verified academic and career milestones.
+- **Dual-Layer Canvas Crowd Footer:** 105 animated pedestrians walking behind and in front of Waleed's standing avatar.
+- **Interactive Portfolio Assistant:** Floating theme-adaptive assistant drawer answering questions about projects, skills, education, and contact info.
+- **Protected Serverless Contact API:** Forms submit via `/api/contact` on Vercel with honeypot spam filtering, strict input validation, and per-IP rate limiting.
 
 ---
 
 ## 🚀 Quick Start / Deployment
 
 ### 1. Run Locally
-- Double-click `start.bat` (or open `index.html` in any browser, or run `python server.py`).
-- View at: [http://localhost:3000](http://localhost:3000)
+- Double-click `start.bat` (or run `python server.py`).
+- View at: [http://127.0.0.1:3000](http://127.0.0.1:3000)
 
-### 2. Static Hosting (GitHub Pages / Netlify / Vercel)
-This folder is 100% self-contained and pure static.
-- **GitHub Pages:**
-  1. Push changes to GitHub (or run `deploy_to_github.bat`).
-  2. In your repo: **Settings > Pages > Deploy from a branch (`main` / `root`)**.
-  3. Live URL: **https://iwaleedhasan.github.io/Portfolio-website/**
-- **Vercel / Netlify:** Import the repository and deploy with zero build configuration!
+### 2. Hosting on Vercel
+- Connect the repository on Vercel and deploy with zero build step. Static assets are served from root and `/api/contact.js` runs automatically as a Node.js Serverless Function.
 
 ---
 
@@ -42,28 +38,32 @@ This folder is 100% self-contained and pure static.
 
 ```
 Portfolio website/
-├── index.html                   # Master static portfolio webpage
-├── bg.jpg                       # Black & white portrait photograph
-├── favicon.ico / icon.svg       # Favicons & monogram icons
-├── icon.png / apple-touch-icon  # High-DPI transparent icons
-├── server.py                    # Lightweight local development server
-├── start.bat                    # 1-click local launch script
-├── deploy_to_github.bat         # 1-click push script to GitHub
+├── index.html                        # Master portfolio webpage
+├── api/
+│   └── contact.js                    # Vercel Serverless contact endpoint (validated & rate-limited)
+├── bg.jpg / profile.jpg              # Portrait & square search-thumbnail photographs
+├── favicon.ico / icon.svg / *.png    # Multi-resolution favicons & pure-vector monogram icon
+├── 8a9e4d5f2b1c6789e02f6270waleed.txt# Bing IndexNow domain verification key
+├── robots.txt / sitemap.xml          # Search engine crawl directives & sitemap
+├── vercel.json                       # Clean URLs & HTTP security headers (CSP, X-Frame-Options)
+├── server.py                         # Localhost-only development server (127.0.0.1:3000)
+├── start.bat                         # 1-click local launch script
+├── deploy_to_github.bat              # Safe push helper script to GitHub
 ├── css/
-│   └── style.css                # Base stylesheet and theme tokens
+│   └── style.css                     # Base stylesheet and theme tokens
 ├── js/
-│   ├── theme.js                 # Theme engine (Light/Dark mode)
-│   ├── folders.js               # 3D folder interactions & modal case studies
-│   ├── hero.js                  # Hero interactions & navigation drawer
-│   ├── portrait-motion.js       # 3D scroll-driven morphing card
-│   ├── timeline.js              # Sinusoidal Bézier curve calculator
-│   ├── crowd.js                 # Dual-canvas pedestrian simulation
-│   └── chat.js                  # Ask AI assistant drawer
+│   ├── theme.js                      # Theme engine (Light/Dark mode)
+│   ├── folders.js                    # 3D folder interactions & case study panels
+│   ├── hero.js                       # Hero interactions & navigation drawer
+│   ├── portrait-motion.js            # 3D scroll-driven morphing card
+│   ├── timeline.js                   # Sinusoidal Bézier curve calculator
+│   ├── crowd.js                      # Dual-canvas pedestrian simulation
+│   └── chat.js                       # Interactive portfolio assistant drawer
 ├── footer/
-│   └── bengaluru/
-│       ├── waleed-standing.png  # Transparent standing avatar (Yellow sneakers)
-│       └── crowd-01..07.webp    # Pedestrian crowd sprite sheets
-└── README.md                    # Project documentation
+│   └── crowd/
+│       ├── waleed-standing.png       # Transparent standing avatar (Kurta Shalwar & Peshawari Chappal)
+│       └── crowd-01..07.webp         # Pedestrian crowd sprite sheets
+└── README.md                         # Project documentation
 ```
 
 ---

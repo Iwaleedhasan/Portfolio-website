@@ -34,13 +34,11 @@
         f.setAttribute('aria-expanded', String(isCurrent));
       });
 
-      let found = false;
       studies.forEach(study => {
         const pid = study.getAttribute('data-project-id');
         if (pid === folderId) {
           study.removeAttribute('hidden');
           study.style.display = 'block';
-          found = true;
           if (toolbarTitle) {
             toolbarTitle.textContent = study.getAttribute('data-category') || 'Project details';
           }
@@ -59,10 +57,10 @@
     }
 
     function closeProject() {
+      const activeFolder = document.querySelector('.project-folder[aria-expanded="true"]');
       panel.setAttribute('hidden', '');
       panel.style.display = 'none';
       folders.forEach(f => f.setAttribute('aria-expanded', 'false'));
-      const activeFolder = document.querySelector('.project-folder[aria-expanded="true"]');
       if (activeFolder) activeFolder.focus();
     }
 

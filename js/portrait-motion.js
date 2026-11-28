@@ -27,7 +27,6 @@
     let radiusHero = 9;
     let radiusBio = 16;
     let lastTime = 0;
-    let isDestroyed = false;
 
     function renderCard() {
       const sw = scaleW + (1 - scaleW) * u;
@@ -67,7 +66,6 @@
     }
 
     function measure() {
-      if (isDestroyed) return;
       cancelAnimationFrame(animFrameId);
       animFrameId = 0;
       lastTime = 0;

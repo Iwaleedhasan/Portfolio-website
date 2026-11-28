@@ -160,7 +160,7 @@
     body {
       background: var(--sc-canvas) !important;
       color: var(--sc-ink) !important;
-      font-family: "Geist", system-ui, sans-serif;
+      font-family: "Instrument Sans", "Space Grotesk", system-ui, sans-serif;
       margin: 0;
       padding: 0;
       transition: background-color 0.25s ease, color 0.25s ease;
@@ -740,9 +740,11 @@
       <a class="brand-pill" href="#about" aria-label="Waleed Hassan Home">Waleed</a>
       <div class="nav-actions">
         <button type="button" aria-label="Switch to light mode" aria-pressed="false" class="theme-toggle">
-          <span class="wave-icon-track">
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+          <span class="wave-icon" style="--wave-icon-size: 18px;">
+            <span class="wave-icon-track">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"></path></svg>
+              </span>
             </span>
           </span>
         </button>
@@ -816,12 +818,11 @@
     "Inventory Management System": "C# · OOP · Store Architecture"
   },
   skills: {
-    languages: ["TypeScript", "JavaScript", "Python", "C++", "C#", "HTML5", "CSS3", "React", "Astro", "Tailwind CSS"],
-    ai: ["Prompt Engineering", "Conversational AI Architecture", "Client-Side RAG", "OpenAI API", "Gemini API"],
-    core: ["SQL", "MySQL", "Relational Schema Design", "Git", "GitHub", "Linux/Bash", "WCAG AA", "Mobile-First"]
+    languages: ["Python", "C++", "C#", "JavaScript (ES6+)", "HTML5", "CSS3", "SQL", "MySQL"],
+    ai: ["Prompt Engineering", "Interactive Assistant UI", "LLM API Integration"],
+    core: ["Relational Schema Design", "Data Structures & Algorithms", "OOP", "Git", "GitHub", "Linux/Bash", "Mobile-First"]
   }
 };</pre>
-        <canvas></canvas>
       </div>
 
       <!-- Anchor Link for Hero Portrait -->
@@ -905,7 +906,7 @@
       </figure>
 
       <div class="bio-description">
-        <p class="bio-lead">Software Engineer and Computer Science undergraduate at UET Lahore specializing in <strong>responsive web development</strong>, <strong>conversational AI architectures</strong>, relational database systems, and <strong>algorithmic software engineering</strong> with strict typing and clean architecture.</p>
+        <p class="bio-lead">Software Engineer and Computer Science undergraduate at UET Lahore specializing in <strong>responsive web development</strong>, interactive web interfaces, relational database systems, and <strong>algorithmic software engineering</strong> with clean, modular architecture.</p>
         <div class="bio-actions">
           <a class="bio-projects wave-target" href="#projects">
             <span class="wave-text">
@@ -930,54 +931,51 @@
         <p>The tools behind<br/> my work.</p>
       </div>
       <div class="skills-specimens">
-        <!-- Group 1: Languages & Frameworks -->
+        <!-- Group 1: Languages & Web -->
         <article class="skills-specimen" aria-labelledby="skills-languages-title">
-          <h3 id="skills-languages-title">Languages &amp; Frameworks</h3>
-          <p class="skills-specimen-note">Modern typed languages, responsive UI systems, and algorithmic development.</p>
+          <h3 id="skills-languages-title">Languages &amp; Web</h3>
+          <p class="skills-specimen-note">Core systems languages, responsive web UIs, and algorithmic development.</p>
           <ul class="skills-type-mosaic">
-            <li>TypeScript</li>
-            <li>JavaScript (ES6+)</li>
             <li>Python</li>
             <li>C++</li>
             <li>C#</li>
+            <li>JavaScript (ES6+)</li>
             <li>HTML5</li>
             <li>CSS3</li>
+            <li>TypeScript</li>
             <li>React</li>
-            <li>Astro</li>
             <li>Tailwind CSS</li>
-            <li>Lucide React</li>
           </ul>
         </article>
 
-        <!-- Group 2: AI & Retrieval Engineering -->
+        <!-- Group 2: AI & Interactive Systems -->
         <article class="skills-specimen" aria-labelledby="skills-ai-title">
-          <h3 id="skills-ai-title">AI &amp; Retrieval Engineering</h3>
-          <p class="skills-specimen-note">Conversational agents, retrieval-augmented pipelines, and LLM integrations.</p>
+          <h3 id="skills-ai-title">AI &amp; Interactive Systems</h3>
+          <p class="skills-specimen-note">Prompt workflows, API integrations, and interactive web assistant tooling.</p>
           <ul class="skills-type-mosaic">
             <li>Prompt Engineering</li>
-            <li>Conversational AI Architecture</li>
-            <li>Client-Side RAG</li>
+            <li>LLM API Integration</li>
+            <li>Interactive Assistant UI</li>
             <li>OpenAI API</li>
             <li>Gemini API</li>
-            <li>Anthropic API</li>
           </ul>
         </article>
 
         <!-- Group 3: Databases, Tools & Core Practices -->
         <article class="skills-specimen" aria-labelledby="skills-tools-title">
           <h3 id="skills-tools-title">Databases, Tools &amp; Practices</h3>
-          <p class="skills-specimen-note">Relational schema architecture, system workflows, and production practices.</p>
+          <p class="skills-specimen-note">Relational schema architecture, system workflows, and deployment practices.</p>
           <ul class="skills-type-mosaic">
             <li>SQL</li>
             <li>MySQL</li>
             <li>Relational Schema Design</li>
+            <li>Data Structures &amp; Algorithms</li>
+            <li>Object-Oriented Design</li>
             <li>Git</li>
             <li>GitHub</li>
             <li>Linux / Bash</li>
-            <li>npm</li>
-            <li>Vite</li>
-            <li>WCAG AA Accessibility</li>
-            <li>Mobile-First Architecture</li>
+            <li>Vercel Serverless</li>
+            <li>Responsive Design</li>
           </ul>
         </article>
       </div>
@@ -1142,8 +1140,8 @@
                   <div><strong>Role:</strong> System Architect &amp; Core Engineer</div>
                 </div>
                 <div style="margin-top:16px;">
-                  <a href="https://github.com/Iwaleedhasan" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; color:var(--sc-ink); font-weight:600; text-decoration:none; font-size:14px;">
-                    View on GitHub ↗
+                  <a href="https://github.com/Waleedhasn/DSAFINALPROJECT" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; color:var(--sc-ink); font-weight:600; text-decoration:none; font-size:14px;">
+                    View repository on GitHub ↗
                   </a>
                 </div>
               </div>
@@ -1176,8 +1174,8 @@
                   <div><strong>Role:</strong> Database Architect &amp; Backend Developer</div>
                 </div>
                 <div style="margin-top:16px;">
-                  <a href="https://github.com/Iwaleedhasan" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; color:var(--sc-ink); font-weight:600; text-decoration:none; font-size:14px;">
-                    View on GitHub ↗
+                  <a href="https://github.com/Waleedhasn?tab=repositories" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; color:var(--sc-ink); font-weight:600; text-decoration:none; font-size:14px;">
+                    Browse GitHub projects ↗
                   </a>
                 </div>
               </div>
@@ -1210,8 +1208,8 @@
                   <div><strong>Role:</strong> Game Systems Developer</div>
                 </div>
                 <div style="margin-top:16px;">
-                  <a href="https://github.com/Iwaleedhasan" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; color:var(--sc-ink); font-weight:600; text-decoration:none; font-size:14px;">
-                    View on GitHub ↗
+                  <a href="https://github.com/Waleedhasn?tab=repositories" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; color:var(--sc-ink); font-weight:600; text-decoration:none; font-size:14px;">
+                    Browse GitHub projects ↗
                   </a>
                 </div>
               </div>
@@ -1244,8 +1242,8 @@
                   <div><strong>Role:</strong> Software &amp; Desktop Architect</div>
                 </div>
                 <div style="margin-top:16px;">
-                  <a href="https://github.com/Iwaleedhasan" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; color:var(--sc-ink); font-weight:600; text-decoration:none; font-size:14px;">
-                    View on GitHub ↗
+                  <a href="https://github.com/Waleedhasn/OOP-semester-2" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; color:var(--sc-ink); font-weight:600; text-decoration:none; font-size:14px;">
+                    View repository on GitHub ↗
                   </a>
                 </div>
               </div>
@@ -1282,7 +1280,7 @@
         </article>
 
         <!-- Node 2: 2022-2024 — FSc Pre-Engineering -->
-        <article class="journey-stop journey-masters" aria-labelledby="stop-2-title">
+        <article class="journey-stop journey-offset-high" aria-labelledby="stop-2-title">
           <span class="journey-stop-marker" aria-hidden="true"><span></span></span>
           <div class="journey-stop-content">
             <p class="journey-date"><span class="journey-current">Intermediate</span>2022 – 2024</p>
@@ -1293,7 +1291,7 @@
         </article>
 
         <!-- Node 3: 2020-2022 — Matriculation in Science -->
-        <article class="journey-stop journey-internship" aria-labelledby="stop-3-title">
+        <article class="journey-stop journey-offset-low" aria-labelledby="stop-3-title">
           <span class="journey-stop-marker" aria-hidden="true"><span></span></span>
           <div class="journey-stop-content">
             <p class="journey-date"><span class="journey-current">Secondary School</span>2020 – 2022</p>
@@ -1304,7 +1302,7 @@
         </article>
 
         <!-- Node 4: Verified Employment — Data Entry Specialist -->
-        <article class="journey-stop journey-freelance" aria-labelledby="stop-4-title">
+        <article class="journey-stop journey-offset-high" aria-labelledby="stop-4-title">
           <span class="journey-stop-marker" aria-hidden="true"><span></span></span>
           <div class="journey-stop-content">
             <p class="journey-date"><span class="journey-current">Verified Employment</span></p>
@@ -1315,7 +1313,7 @@
         </article>
 
         <!-- Node 5: Engineering Practice — Software & Systems Development -->
-        <article class="journey-stop journey-bachelors" aria-labelledby="stop-5-title">
+        <article class="journey-stop journey-offset-low" aria-labelledby="stop-5-title">
           <span class="journey-stop-marker" aria-hidden="true"><span></span></span>
           <div class="journey-stop-content">
             <p class="journey-date"><span class="journey-current">Engineering Practice</span></p>
@@ -1349,34 +1347,47 @@
 
         <!-- Contact Form -->
         <form id="portfolio-contact-form" class="contact-form-card" action="/api/contact" method="POST">
-          <!-- Anti-spam honeypot and configuration -->
-          <input type="text" name="_honey" style="display:none;"/>
-          <input type="hidden" name="_captcha" value="false"/>
-          <input type="hidden" name="_subject" value="New Portfolio Message from WaleedHassan.vercel.app"/>
-          <input type="hidden" name="_template" value="table"/>
+          <!-- Anti-spam honeypot -->
+          <input id="contact-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none;"/>
 
           <div>
             <label for="contact-name" style="display:block; font-size:13px; font-weight:600; color:var(--sc-ink-soft); margin-bottom:8px;">Your name</label>
-            <input id="contact-name" type="text" name="name" placeholder="What should I call you?" required />
+            <input id="contact-name" type="text" name="name" placeholder="What should I call you?" minlength="2" maxlength="100" required />
           </div>
           <div>
             <label for="contact-email" style="display:block; font-size:13px; font-weight:600; color:var(--sc-ink-soft); margin-bottom:8px;">Email address</label>
-            <input id="contact-email" type="email" name="email" placeholder="you@company.com" required />
+            <input id="contact-email" type="email" name="email" placeholder="you@company.com" maxlength="150" required />
           </div>
           <div>
             <label for="contact-message" style="display:block; font-size:13px; font-weight:600; color:var(--sc-ink-soft); margin-bottom:8px;">What do you have in mind?</label>
-            <textarea id="contact-message" name="message" rows="4" placeholder="Tell me about your project, idea, or role..." required style="resize:vertical;"></textarea>
+            <textarea id="contact-message" name="message" rows="4" placeholder="Tell me about your project, idea, or role..." minlength="5" maxlength="4000" required style="resize:vertical;"></textarea>
           </div>
           <div class="contact-form-actions">
             <button type="submit" id="contact-submit-btn" style="padding:14px 28px; background:var(--sc-ink); color:var(--sc-canvas); border:none; border-radius:999px; font-weight:700; font-size:15px; cursor:pointer; align-self:flex-start; transition:all 0.2s;">Send message ↗</button>
             <a href="mailto:waleed2206420@gmail.com" style="color:var(--sc-ink-soft); font-size:14px; text-decoration:underline;">Or email directly ✉</a>
-            <span id="contact-form-status" style="font-size:14px; font-weight:600; display:none;"></span>
+            <span id="contact-form-status" aria-live="polite" style="font-size:14px; font-weight:600; display:none;"></span>
           </div>
         </form>
         <script>
           (function() {
             var form = document.getElementById('portfolio-contact-form');
             if (!form) return;
+
+            function showFallback(statusEl, prefixText, nameVal, emailVal, messageVal) {
+              var mailtoUrl = 'mailto:waleed2206420@gmail.com?subject=' +
+                encodeURIComponent('Portfolio Contact from ' + nameVal) +
+                '&body=' + encodeURIComponent(messageVal + '\n\nSender: ' + emailVal);
+              statusEl.style.color = '#f59e0b';
+              statusEl.textContent = prefixText + ' ';
+              var link = document.createElement('a');
+              link.href = mailtoUrl;
+              link.textContent = 'Click here to send via your email app ↗';
+              link.style.color = 'var(--sc-ink)';
+              link.style.textDecoration = 'underline';
+              link.style.fontWeight = '700';
+              statusEl.appendChild(link);
+            }
+
             form.addEventListener('submit', function(e) {
               e.preventDefault();
               var btn = document.getElementById('contact-submit-btn');
@@ -1384,6 +1395,8 @@
               var nameVal = (document.getElementById('contact-name').value || '').trim();
               var emailVal = (document.getElementById('contact-email').value || '').trim();
               var messageVal = (document.getElementById('contact-message').value || '').trim();
+              var honeyEl = document.getElementById('contact-honey');
+              var honeyVal = honeyEl ? honeyEl.value : '';
 
               btn.disabled = true;
               btn.textContent = 'Sending...';
@@ -1391,40 +1404,46 @@
               status.style.color = 'var(--sc-ink-soft)';
               status.textContent = 'Sending message to Waleed...';
 
-              var formData = new FormData(form);
-              fetch('https://formsubmit.co/ajax/waleed2206420@gmail.com', {
+              fetch('/api/contact', {
                 method: 'POST',
-                body: formData,
                 headers: {
+                  'Content-Type': 'application/json',
                   'Accept': 'application/json'
-                }
+                },
+                body: JSON.stringify({
+                  name: nameVal,
+                  email: emailVal,
+                  message: messageVal,
+                  _honey: honeyVal
+                })
               })
-              .then(function(res) { return res.json(); })
-              .then(function(data) {
+              .then(function(res) {
+                return res.json().then(function(data) {
+                  return { ok: res.ok, status: res.status, data: data };
+                });
+              })
+              .then(function(result) {
                 btn.disabled = false;
                 btn.textContent = 'Send message ↗';
-                if (data && (data.success === "true" || data.success === true)) {
+                var data = result.data || {};
+                if (result.ok && data.success === true) {
                   status.style.color = '#10b981';
                   status.textContent = '✓ Thank you! Your message has been sent directly to Waleed.';
                   form.reset();
                   setTimeout(function() {
                     status.style.display = 'none';
                   }, 8000);
-                } else if (data && data.message && data.message.indexOf('Activation') !== -1) {
-                  status.style.color = '#38bdf8';
-                  status.innerHTML = 'Action required: Please check your Gmail (including Spam folder) to click "Activate Form" once.';
-                } else {
-                  var mailtoFallback = 'mailto:waleed2206420@gmail.com?subject=' + encodeURIComponent('Portfolio Contact from ' + nameVal) + '&body=' + encodeURIComponent(messageVal + '\n\nSender: ' + emailVal);
+                } else if (result.status === 400 || result.status === 429) {
                   status.style.color = '#f59e0b';
-                  status.innerHTML = 'Delivery pending. <a href="' + mailtoFallback + '" style="color:var(--sc-accent); text-decoration:underline; font-weight:700;">Click to send directly via Gmail ↗</a>';
+                  status.textContent = data.message || 'Please check your input and try again.';
+                } else {
+                  showFallback(status, data.message || 'Delivery unavailable.', nameVal, emailVal, messageVal);
                 }
               })
-              .catch(function(err) {
+              .catch(function() {
                 btn.disabled = false;
                 btn.textContent = 'Send message ↗';
-                var mailtoFallback = 'mailto:waleed2206420@gmail.com?subject=' + encodeURIComponent('Portfolio Contact from ' + nameVal) + '&body=' + encodeURIComponent(messageVal + '\n\nSender: ' + emailVal);
-                status.style.color = '#f59e0b';
-                status.innerHTML = 'Network blocked. <a href="' + mailtoFallback + '" style="color:var(--sc-accent); text-decoration:underline; font-weight:700;">Click here to send directly via Gmail / Outlook ↗</a>';
+                showFallback(status, 'Could not connect.', nameVal, emailVal, messageVal);
               });
             });
           })();
@@ -1438,44 +1457,44 @@
     <div class="footer-top wrap" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:40px; margin-bottom:48px;">
       <div class="footer-identity">
         <h2 style="font-size:32px; font-weight:800; margin:0 0 8px 0; color:#fff;">Waleed.</h2>
-        <p style="color:#9a9ba1; margin:0; line-height:1.5;">Software Engineer &amp;<br/>Web Developer.</p>
+        <p style="color:#a1a1aa; margin:0; line-height:1.5;">Software Engineer &amp;<br/>Web Developer.</p>
       </div>
       <nav aria-label="Footer navigation" style="display:flex; flex-direction:column; gap:8px;">
-        <span style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#666;">Explore</span>
+        <span style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#a1a1aa;">Explore</span>
         <div style="display:flex; flex-wrap:wrap; gap:16px;">
-          <a href="#about" style="color:#bdbcb6; text-decoration:none;">About</a>
-          <a href="#skills" style="color:#bdbcb6; text-decoration:none;">Skills</a>
-          <a href="#projects" style="color:#bdbcb6; text-decoration:none;">Projects</a>
-          <a href="#experience" style="color:#bdbcb6; text-decoration:none;">Experience</a>
-          <a href="#contact" style="color:#bdbcb6; text-decoration:none;">Contact</a>
+          <a href="#about" style="color:#d4d4d8; text-decoration:none;">About</a>
+          <a href="#skills" style="color:#d4d4d8; text-decoration:none;">Skills</a>
+          <a href="#projects" style="color:#d4d4d8; text-decoration:none;">Projects</a>
+          <a href="#experience" style="color:#d4d4d8; text-decoration:none;">Experience</a>
+          <a href="#contact" style="color:#d4d4d8; text-decoration:none;">Contact</a>
         </div>
       </nav>
       <div class="footer-contact" style="display:flex; flex-direction:column; gap:8px;">
-        <span style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#666;">Get in touch</span>
+        <span style="font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:#a1a1aa;">Get in touch</span>
         <a href="mailto:waleed2206420@gmail.com" style="color:#f5f4f0; text-decoration:none; font-weight:600;">waleed2206420@gmail.com ↗</a>
-        <span style="color:#666; font-size:13px; margin-top:4px;">© 2026 Waleed Hassan. All rights reserved.</span>
+        <span style="color:#a1a1aa; font-size:13px; margin-top:4px;">© 2026 Waleed Hassan. All rights reserved.</span>
       </div>
     </div>
 
     <div class="footer-finale">
       <div class="footer-finale-heading wrap" style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:18px;">
         <p style="font-size:clamp(32px, 5vw, 56px); font-weight:800; margin:0; color:#fff;">See you around.</p>
-        <a href="#" style="color:#9a9ba1; text-decoration:none; font-size:14px; font-weight:600;">Back to top ↑</a>
+        <a href="#" style="color:#a1a1aa; text-decoration:none; font-size:14px; font-weight:600;">Back to top ↑</a>
       </div>
 
       <!-- Animated Dual-Canvas Crowd Stage -->
-      <button type="button" class="footer-crowd-scene" aria-label="Pause crowd animation" aria-pressed="false" data-cast-size="105">
+      <button type="button" class="footer-crowd-scene" aria-label="Pause crowd animation" aria-pressed="false">
         <span class="footer-crowd-name" aria-hidden="true">WALEED.</span>
         <!-- Back Layer (Pedestrians behind) -->
         <canvas class="footer-crowd-layer footer-crowd-back" aria-hidden="true"></canvas>
         <!-- Standing Avatar (Waleed in Kurta Shalwar & Peshawari Chappal) -->
-        <img class="footer-crowd-portrait" src="./footer/bengaluru/waleed-standing.png" alt="Waleed Hassan standing avatar" width="375" height="1400" loading="lazy"/>
+        <img class="footer-crowd-portrait" src="./footer/crowd/waleed-standing.png" alt="Waleed Hassan standing avatar" width="375" height="1400" loading="lazy"/>
         <!-- Front Layer (Pedestrians in front) -->
         <canvas class="footer-crowd-layer footer-crowd-front" aria-hidden="true"></canvas>
       </button>
 
       <div class="footer-scene-bottom wrap" style="padding:16px 0 32px 0;">
-        <small style="color:#777; font-size:13px;">Finally, some traffic on my website.</small>
+        <small style="color:#a1a1aa; font-size:13px;">Finally, some traffic on my website.</small>
       </div>
     </div>
   </footer>
